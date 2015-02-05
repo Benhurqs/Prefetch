@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#fff" 
+    android:id="@+id/prefechProgressLayout"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/title_rect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#0098d9" >
+
+        <RelativeLayout
+            android:id="@+id/title_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:textColor="#85daff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_rect" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_dialog_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dfdfdf"
+                android:padding="16dp"
+                android:textColor="#4d4d4d"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp" >
+
+                <TextView
+                    android:id="@+id/txt_error"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="9dp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ProgressBar
+                        android:id="@+id/prefechProgress"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                        android:minHeight="50dp"  />
+
+                    <TextView
+                        android:id="@+id/prefechProgressTxt"
+                        android:gravity="center"
+                        android:layout_alignBottom="@id/prefechProgress"
+                        android:layout_alignLeft="@id/prefechProgress"
+                        android:layout_alignRight="@id/prefechProgress"
+                        android:layout_alignTop="@id/prefechProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/actionBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/white"
+            android:padding="15dp"
+            android:text="Cancelar" />
+        
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/white"
+            android:padding="15dp"
+            android:text="Continuar"
+            android:visibility="gone" />
+        
+    </RelativeLayout>
+    
+    <include layout="@layout/prefech_success" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/prefechSuccess" android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="app_name">Prefetch</string>
+  <string name="action_title">Raven</string>
+  
+  <!-- basemap menu items -->
+  <string name="StreetMapMenu">Streets</string>
+  <string name="TopoMenu">Topographic</string>
+  <string name="GrayMenu">Gray</string>
+  <string name="OceanMenu">Oceans</string>
+  <string name="SatelliteMenu">Satellite</string>
+  <string name="HybridMenu">Hybrid</string>
+  <string name="NatGeoMenu">Nat_Geo</string>
+  <string name="OSMMenu">OSM</string>
+  
+  <!-- menu items -->
+  <string name="key">Chave ArcGIS</string>
+  <string name="settings">Configurações</string>
+  <string name="find">Procurar</string>
+  <string name="maps">Mapa</string>
+  
+  <!-- Settings  -->
+  <string name="settings_map">Configuração do mapa</string>
+  <string name="off_map">Mapa Offline</string>
+  <string name="off_map_summary">Usar mapa offline quando não estiver conectado.</string>
+  
+  <!-- arcgiz license -->
+  <string name="license_succeeded">Licença autorizada.</string>
+  <string name="license_no_succeeded">Licença não autorizada.</string>
+  
+  <string name="prefetch_msg">Navegue até a área que deseja salvar para uso offline. E clique sobre o botão Prefetch.</string>
+  <string name="prefetch">Prefetch</string>
+  
+  <!-- dialog -->
+  <string name="arcgis_key">Preencha com a chave do ArcGis.</string>
+  <string name="key_error">Chave inválida.</string>
+  <string name="find_address">Preencha com o local que deseja fazer o prefetch.</string>
+  <string name="find_error">Local não encontrado.</string>
+  <string name="prefech_progress_title">"Carregando zoom nivel %1$s"</string>
+  <string name="prefech_progress_txt_bar">"%1$s/%2$s"</string>
+  <string name="prefech_progress_network_error">Houve um erro de conexão.\nVerifique sua conexão com a internet e pressione o botão continuar.</string>
+  <string name="prefech_progress_success">Sucesso</string>
+  <string name="prefech_success">Carregamento concluído com sucesso.</string>
+  <string name="txt_yes">Sim</string>
+  <string name="txt_no">Não</string>
+  <string name="deleted_files_progress">%1$s arquivos deletados até o momento.</string>
+  <string name="deleting_tiles">Deletando arquivos</string>
+  
+  <!-- File save directoty -->
+  
+  <string name="maps_path">/storage/sdcard1/Raven/Maps</string>
+  <string name="tile_path">/storage/sdcard1/Raven/Maps/%1$s/%2$s</string>
+  <string name="sd_path">/storage/sdcard1</string>
+  <string name="sd_full_txt">O cartão de memória do dispositivo está cheio.\nPara carregar mais mapas você precisa deletar alguns arquivos\nVocê deseja deletar TODOS os mapas antigos para continuar o carregamento? </string>
+  <string name="sd_warning">Atenção</string>
+  
+
+</resources>
