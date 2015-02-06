@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Points preferences -->
+    <string name="point_pref">point_preferences</string>
+    <string name="top_left_x">top_left_x</string>
+    <string name="top_left_y">top_left_y</string>
+    <string name="bottom_right_x">bottom_right_x</string>
+    <string name="bottom_right_y">bottom_right_y</string>
+
+    <!-- Maps preferences -->
+    <string name="map_pref">map_preferences</string>
+    <string name="map_type">map_type</string>
+    
+    <!-- ArcGis -->
+    <string name="arcgis_key_map">arcgis_key_preference</string>
+    <string name="arcgis_preference">arcgis_preference</string>
+    <string name="off_map_preference">off_map__preference</string>
+    
+    <!-- map type -->
+    <string-array name="map_types">
+        <item>Topo</item>
+        <item>Streets</item>
+        <item>Gray</item>
+        <item>Oceans</item>
+        <item>Satellite</item>
+        <item>Hybrid</item>
+        <item>Nat. Geographic</item>
+        <item>OSM</item>
+    </string-array>
+    
+    <!-- map type values -->
+    <string-array name="map_types_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+</resources>

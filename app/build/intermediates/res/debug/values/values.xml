@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/preferences.xml -->
+    <eat-comment/>
+    <string-array name="map_types">
+        <item>Topo</item>
+        <item>Streets</item>
+        <item>Gray</item>
+        <item>Oceans</item>
+        <item>Satellite</item>
+        <item>Hybrid</item>
+        <item>Nat. Geographic</item>
+        <item>OSM</item>
+    </string-array>
+    <string-array name="map_types_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="GrayMenu">Gray</string>
+    <string name="HybridMenu">Hybrid</string>
+    <string name="NatGeoMenu">Nat_Geo</string>
+    <string name="OSMMenu">OSM</string>
+    <string name="OceanMenu">Oceans</string>
+    <string name="SatelliteMenu">Satellite</string>
+    <string name="StreetMapMenu">Streets</string>
+    <string name="TopoMenu">Topographic</string>
+    <string name="action_title">Raven</string>
+    <string name="app_name">Prefetch</string>
+    <string name="arcgis_key">Preencha com a chave do ArcGis.</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/preferences.xml -->
+    <eat-comment/>
+    <string name="arcgis_key_map">arcgis_key_preference</string>
+    <string name="arcgis_preference">arcgis_preference</string>
+    <string name="bottom_right_x">bottom_right_x</string>
+    <string name="bottom_right_y">bottom_right_y</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="deleted_files_progress">%1$s arquivos deletados até o momento.</string>
+    <string name="deleting_tiles">Deletando arquivos</string>
+    <string name="find">Procurar</string>
+    <string name="find_address">Preencha com o local que deseja fazer o prefetch.</string>
+    <string name="find_error">Local não encontrado.</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/urls.xml -->
+    <eat-comment/>
+    <string name="host_name">http://services.arcgisonline.com/ArcGIS/rest/services</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="key">Chave ArcGIS</string>
+    <string name="key_error">Chave inválida.</string>
+    <string name="license_no_succeeded">Licença não autorizada.</string>
+    <string name="license_succeeded">Licença autorizada.</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/preferences.xml -->
+    <eat-comment/>
+    <string name="map_pref">map_preferences</string>
+    <string name="map_type">map_type</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="maps">Mapa</string>
+    <string name="maps_path">/storage/sdcard1/Raven/Maps</string>
+    <string name="off_map">Mapa Offline</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/preferences.xml -->
+    <eat-comment/>
+    <string name="off_map_preference">off_map__preference</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="off_map_summary">Usar mapa offline quando não estiver conectado.</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/preferences.xml -->
+    <eat-comment/>
+    <string name="point_pref">point_preferences</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="prefech_progress_network_error">Houve um erro de conexão.\nVerifique sua conexão com a internet e pressione o botão continuar.</string>
+    <string name="prefech_progress_success">Sucesso</string>
+    <string name="prefech_progress_title">"Carregando zoom nivel %1$s"</string>
+    <string name="prefech_progress_txt_bar">"%1$s/%2$s"</string>
+    <string name="prefech_success">Carregamento concluído com sucesso.</string>
+    <string name="prefetch">Prefetch</string>
+    <string name="prefetch_msg">Navegue até a área que deseja salvar para uso offline. E clique sobre o botão Prefetch.</string>
+    <string name="sd_full_txt">O cartão de memória do dispositivo está cheio.\nPara carregar mais mapas você precisa deletar alguns arquivos\nVocê deseja deletar TODOS os mapas antigos para continuar o carregamento? </string>
+    <string name="sd_path">/storage/sdcard1</string>
+    <string name="sd_warning">Atenção</string>
+    <string name="settings">Configurações</string>
+    <string name="settings_map">Configuração do mapa</string>
+    <string name="tile_path">/storage/sdcard1/Raven/Maps/%1$s/%2$s</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/urls.xml -->
+    <eat-comment/>
+    <string name="tile_url">"%1$s/World_Imagery/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/preferences.xml -->
+    <eat-comment/>
+    <string name="top_left_x">top_left_x</string>
+    <string name="top_left_y">top_left_y</string>
+    <!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="txt_no">Não</string>
+    <string name="txt_yes">Sim</string>
+</resources>

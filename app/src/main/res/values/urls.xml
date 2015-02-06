@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="host_name">http://services.arcgisonline.com/ArcGIS/rest/services</string>
+    <string name="tile_url">"%1$s/World_Imagery/MapServer/tile/%2$s/%3$s/%4$s"</string>
+
+</resources>

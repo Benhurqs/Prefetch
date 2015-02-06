@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:title="ArcGis" >
+        <EditTextPreference
+            android:key="@string/arcgis_key_map"
+            android:summary="@string/arcgis_key"
+            android:title="@string/key" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/settings_map" >
+        
+        <CheckBoxPreference
+            android:key="@string/off_map_preference"
+            android:summary="@string/off_map_summary"
+            android:title="@string/off_map" />
+
+        <ListPreference
+            android:entries="@array/map_types"
+            android:entryValues="@array/map_types_values"
+            android:key="@string/map_pref"
+            android:title="@string/maps" />
+    </PreferenceCategory>
+
+</PreferenceScreen><!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/xml/settings_pref.xml -->

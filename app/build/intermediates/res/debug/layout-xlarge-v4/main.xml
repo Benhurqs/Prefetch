@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:keepScreenOn="true">
+
+    
+
+    <!-- MapView layout and initial basemap and extent. -->
+
+    <com.esri.android.map.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        mapoptions.MapType="Satellite"
+        mapoptions.ZoomLevel="11" />
+
+    <RelativeLayout
+        android:id="@+id/rel_area"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="150dp"
+        android:background="@drawable/red_box" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="15dp"
+            android:text="Área de Prefetch"
+            android:textColor="#FF0000"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/lay_info"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#dfdfdf" >
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:singleLine="false"
+            android:text="@string/prefetch_msg"
+            android:textColor="#4d4d4d"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="7dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/prefetch"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+    
+     <RelativeLayout
+        android:id="@+id/lay_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#90000000"
+        android:visibility="gone" >
+
+         <ProgressBar
+             android:id="@+id/progressBar1"
+             style="?android:attr/progressBarStyleLarge"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="528dp" />
+
+         <TextView
+             android:id="@+id/txt_loading"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_toRightOf="@+id/progressBar1"
+             android:gravity="center_vertical"
+             android:singleLine="false"
+             android:text="Carregando..."
+             android:textColor="#FFFFFF"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/home/benhur/AndroidStudioProjects/Prefetch/app/src/main/res/layout-xlarge/main.xml -->
