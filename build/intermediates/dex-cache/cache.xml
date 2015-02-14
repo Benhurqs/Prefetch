@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="/home/benhur/AndroidStudioProjects/Prefetch/app/libs/jcifs-1.3.17.jar"
+        jar="/home/benhur/Projetos/Prefetch/app/libs/jcifs-1.3.17.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1a2f0e28cc9497fb4927ea2422605fb8023969b6">
-        <dex dex="/home/benhur/AndroidStudioProjects/Prefetch/app/build/intermediates/pre-dexed/debug/jcifs-1.3.17-2ede7fa5649e8898c14adfb05dbfd0d90c9a9d27.jar" />
+        <dex dex="/home/benhur/Projetos/Prefetch/app/build/intermediates/pre-dexed/debug/jcifs-1.3.17-2fbd75e80e629d44196be88435007280e25d78e6.jar" />
     </item>
     <item
-        jar="/home/benhur/AndroidStudioProjects/Prefetch/app/libs/jackson-core-lgpl-1.9.5.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="75ac72d19377a95225217cb4fdfa1290f3c81145">
-        <dex dex="/home/benhur/AndroidStudioProjects/Prefetch/app/build/intermediates/pre-dexed/debug/jackson-core-lgpl-1.9.5-d236ff47824f92f1829c5dd3fe3faaf48b0b1229.jar" />
-    </item>
-    <item
-        jar="/home/benhur/AndroidStudioProjects/Prefetch/app/libs/arcgis-android-api.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6eb8b263ff94c660bc05ec011589e4053d65957b">
-        <dex dex="/home/benhur/AndroidStudioProjects/Prefetch/app/build/intermediates/pre-dexed/debug/arcgis-android-api-752a2f074ec5da5413e4ad7f7e9f6476f3c77a98.jar" />
-    </item>
-    <item
-        jar="/home/benhur/AndroidStudioProjects/Prefetch/app/libs/jackson-mapper-lgpl-1.9.5.jar"
+        jar="/home/benhur/Projetos/Prefetch/app/libs/jackson-mapper-lgpl-1.9.5.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="ffbb48e87fa5e9107c17aaa0616f724d785a4d71">
-        <dex dex="/home/benhur/AndroidStudioProjects/Prefetch/app/build/intermediates/pre-dexed/debug/jackson-mapper-lgpl-1.9.5-1251a411f87443d3ea76b1dc6e78e1400bc4b933.jar" />
+        <dex dex="/home/benhur/Projetos/Prefetch/app/build/intermediates/pre-dexed/debug/jackson-mapper-lgpl-1.9.5-09f63486cfdbc8c7f0ccab8a7f8bf1b5f76c6225.jar" />
     </item>
     <item
-        jar="/home/benhur/AndroidStudioProjects/Prefetch/app/libs/arcgis-android-app-toolkit.jar"
+        jar="/home/benhur/Projetos/Prefetch/app/libs/arcgis-android-app-toolkit.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="ba8d428ad04e30febd942365c6119bb62d7199bb">
-        <dex dex="/home/benhur/AndroidStudioProjects/Prefetch/app/build/intermediates/pre-dexed/debug/arcgis-android-app-toolkit-91a7a6543f933dd36bd3096ae99ab05de831942f.jar" />
+        <dex dex="/home/benhur/Projetos/Prefetch/app/build/intermediates/pre-dexed/debug/arcgis-android-app-toolkit-f181ff6aecebe9cf6186121a8ab3f76d82b9dbc4.jar" />
+    </item>
+    <item
+        jar="/home/benhur/Projetos/Prefetch/app/libs/arcgis-android-api.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6eb8b263ff94c660bc05ec011589e4053d65957b">
+        <dex dex="/home/benhur/Projetos/Prefetch/app/build/intermediates/pre-dexed/debug/arcgis-android-api-0088e01da6a2e5f0eb6262ffa2a7cb7b4ea3dae0.jar" />
+    </item>
+    <item
+        jar="/home/benhur/Projetos/Prefetch/app/libs/jackson-core-lgpl-1.9.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="75ac72d19377a95225217cb4fdfa1290f3c81145">
+        <dex dex="/home/benhur/Projetos/Prefetch/app/build/intermediates/pre-dexed/debug/jackson-core-lgpl-1.9.5-a52c04a8908881c65e3544da25f042dfc3715a5c.jar" />
     </item>
 
 </items>
