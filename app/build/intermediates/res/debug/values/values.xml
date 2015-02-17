@@ -45,9 +45,28 @@
     <eat-comment/>
     <string name="deleted_files_progress">%1$s arquivos deletados até o momento.</string>
     <string name="deleting_tiles">Deletando arquivos</string>
+    <string name="download">Download</string>
     <string name="find">Procurar</string>
     <string name="find_address">Preencha com o local que deseja fazer o prefetch.</string>
     <string name="find_error">Local não encontrado.</string>
+    <!-- From: file:/home/benhur/Projetos/Prefetch/app/src/debug/res/values/google_maps_api.xml -->
+    <eat-comment/>
+    <string name="google_maps_key" templateMergeStrategy="preserve">YOUR_KEY_HERE</string>
+    <string name="google_maps_key_instructions">
+        <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=11:C4:40:66:AE:7A:D1:EA:88:B1:8D:FA:1D:45:A5:F7:FF:A5:FC:D1%3Bbr.com.benhurqs.prefetch.activity
+
+    You can also add your credentials to an existing key, using this line:
+    11:C4:40:66:AE:7A:D1:EA:88:B1:8D:FA:1D:45:A5:F7:FF:A5:FC:D1;br.com.benhurqs.prefetch.activity
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+        -->
+    </string>
     <!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/values/urls.xml -->
     <eat-comment/>
     <string name="host_name">http://services.arcgisonline.com/ArcGIS/rest/services</string>
@@ -65,6 +84,7 @@
     <eat-comment/>
     <string name="maps">Mapa</string>
     <string name="maps_path">/storage/sdcard1/Raven/Maps</string>
+    <string name="my_maps">Meus mapas</string>
     <string name="off_map">Mapa Offline</string>
     <!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/values/preferences.xml -->
     <eat-comment/>
@@ -93,6 +113,10 @@
     <!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/values/urls.xml -->
     <eat-comment/>
     <string name="tile_url">"%1$s/World_Imagery/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="title_activity_google_maps">Map</string>
+    <string name="title_activity_maps">Map</string>
     <!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/values/preferences.xml -->
     <eat-comment/>
     <string name="top_left_x">top_left_x</string>
@@ -101,4 +125,17 @@
     <eat-comment/>
     <string name="txt_no">Não</string>
     <string name="txt_yes">Sim</string>
+    <!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@android:color/holo_red_light</item>
+    </style>
+    <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>

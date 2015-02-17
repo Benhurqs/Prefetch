@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <group android:checkableBehavior="single" >
       <!--   <item
             android:id="@+id/arcgis_key"
             android:showAsAction="never"
@@ -52,7 +51,7 @@
         <item
             android:id="@+id/find"
             android:showAsAction="always"
-            android:title="@string/find"/>
-    </group>
+            android:icon="@android:drawable/ic_menu_search"
+            />
 
 </menu><!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/menu/menu.xml -->

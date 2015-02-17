@@ -21,44 +21,46 @@ public final class R {
         public static final int red_box=0x7f020003;
     }
     public static final class id {
-        public static final int Gray=0x7f08001d;
-        public static final int Hybrid_map=0x7f080022;
-        public static final int NatGeo_map=0x7f080023;
-        public static final int OSM_Map=0x7f080024;
-        public static final int Ocean_Basemap=0x7f08001e;
-        public static final int Satellite_Map=0x7f080021;
-        public static final int World_Street_Map=0x7f08001b;
-        public static final int World_Topo=0x7f08001c;
-        public static final int actionBtnLayout=0x7f080015;
-        public static final int btnCancel=0x7f080008;
-        public static final int btnClose=0x7f08001a;
-        public static final int btnContinue=0x7f080017;
-        public static final int btnOk=0x7f080007;
-        public static final int btn_start=0x7f08000a;
-        public static final int deleteTxt=0x7f080014;
-        public static final int edt_value=0x7f080005;
-        public static final int find=0x7f080025;
-        public static final int lay_info=0x7f080009;
-        public static final int lay_loading=0x7f08000f;
-        public static final int map=0x7f08000c;
-        public static final int maps_type=0x7f080020;
-        public static final int prefechProgress=0x7f080013;
-        public static final int prefechProgressLayout=0x7f080012;
-        public static final int prefechProgressTxt=0x7f080016;
-        public static final int prefechSuccess=0x7f080018;
-        public static final int prefech_done=0x7f080019;
-        public static final int progressBar1=0x7f080010;
-        public static final int rel_area=0x7f08000d;
-        public static final int scrollView1=0x7f080003;
-        public static final int settings=0x7f08001f;
-        public static final int textView1=0x7f08000e;
-        public static final int title_content=0x7f080001;
-        public static final int title_rect=0x7f080000;
-        public static final int txt_dialog_msg=0x7f080004;
-        public static final int txt_dialog_title=0x7f080002;
-        public static final int txt_error=0x7f080006;
-        public static final int txt_loading=0x7f080011;
-        public static final int txt_msg=0x7f08000b;
+        public static final int Gray=0x7f09001d;
+        public static final int Hybrid_map=0x7f090022;
+        public static final int NatGeo_map=0x7f090023;
+        public static final int OSM_Map=0x7f090024;
+        public static final int Ocean_Basemap=0x7f09001e;
+        public static final int Satellite_Map=0x7f090021;
+        public static final int World_Street_Map=0x7f09001b;
+        public static final int World_Topo=0x7f09001c;
+        public static final int actionBtnLayout=0x7f090015;
+        public static final int btnCancel=0x7f090008;
+        public static final int btnClose=0x7f09001a;
+        public static final int btnContinue=0x7f090017;
+        public static final int btnOk=0x7f090007;
+        public static final int btn_start=0x7f09000a;
+        public static final int deleteTxt=0x7f090014;
+        public static final int downlaod=0x7f090026;
+        public static final int edt_value=0x7f090005;
+        public static final int find=0x7f090025;
+        public static final int lay_info=0x7f090009;
+        public static final int lay_loading=0x7f09000f;
+        public static final int map=0x7f09000c;
+        public static final int maps_type=0x7f090020;
+        public static final int my_maps=0x7f090027;
+        public static final int prefechProgress=0x7f090013;
+        public static final int prefechProgressLayout=0x7f090012;
+        public static final int prefechProgressTxt=0x7f090016;
+        public static final int prefechSuccess=0x7f090018;
+        public static final int prefech_done=0x7f090019;
+        public static final int progressBar1=0x7f090010;
+        public static final int rel_area=0x7f09000d;
+        public static final int scrollView1=0x7f090003;
+        public static final int settings=0x7f09001f;
+        public static final int textView1=0x7f09000e;
+        public static final int title_content=0x7f090001;
+        public static final int title_rect=0x7f090000;
+        public static final int txt_dialog_msg=0x7f090004;
+        public static final int txt_dialog_title=0x7f090002;
+        public static final int txt_error=0x7f090006;
+        public static final int txt_loading=0x7f090011;
+        public static final int txt_msg=0x7f09000b;
     }
     public static final class layout {
         public static final int dialog_layout=0x7f030000;
@@ -68,8 +70,9 @@ public final class R {
         public static final int prefech_success=0x7f030004;
     }
     public static final class menu {
-        public static final int basemap_menu=0x7f070000;
-        public static final int menu=0x7f070001;
+        public static final int basemap_menu=0x7f080000;
+        public static final int menu=0x7f080001;
+        public static final int menu_offline=0x7f080002;
     }
     public static final class string {
         public static final int GrayMenu=0x7f060000;
@@ -89,40 +92,65 @@ public final class R {
         public static final int bottom_right_y=0x7f06000e;
         public static final int deleted_files_progress=0x7f06000f;
         public static final int deleting_tiles=0x7f060010;
-        public static final int find=0x7f060011;
-        public static final int find_address=0x7f060012;
-        public static final int find_error=0x7f060013;
-        public static final int host_name=0x7f060014;
-        public static final int key=0x7f060015;
-        public static final int key_error=0x7f060016;
-        public static final int license_no_succeeded=0x7f060017;
-        public static final int license_succeeded=0x7f060018;
-        public static final int map_pref=0x7f060019;
-        public static final int map_type=0x7f06001a;
-        public static final int maps=0x7f06001b;
-        public static final int maps_path=0x7f06001c;
-        public static final int off_map=0x7f06001d;
-        public static final int off_map_preference=0x7f06001e;
-        public static final int off_map_summary=0x7f06001f;
-        public static final int point_pref=0x7f060020;
-        public static final int prefech_progress_network_error=0x7f060021;
-        public static final int prefech_progress_success=0x7f060022;
-        public static final int prefech_progress_title=0x7f060023;
-        public static final int prefech_progress_txt_bar=0x7f060024;
-        public static final int prefech_success=0x7f060025;
-        public static final int prefetch=0x7f060026;
-        public static final int prefetch_msg=0x7f060027;
-        public static final int sd_full_txt=0x7f060028;
-        public static final int sd_path=0x7f060029;
-        public static final int sd_warning=0x7f06002a;
-        public static final int settings=0x7f06002b;
-        public static final int settings_map=0x7f06002c;
-        public static final int tile_path=0x7f06002d;
-        public static final int tile_url=0x7f06002e;
-        public static final int top_left_x=0x7f06002f;
-        public static final int top_left_y=0x7f060030;
-        public static final int txt_no=0x7f060031;
-        public static final int txt_yes=0x7f060032;
+        public static final int download=0x7f060011;
+        public static final int find=0x7f060012;
+        public static final int find_address=0x7f060013;
+        public static final int find_error=0x7f060014;
+        public static final int google_maps_key=0x7f060015;
+        /** 
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=11:C4:40:66:AE:7A:D1:EA:88:B1:8D:FA:1D:45:A5:F7:FF:A5:FC:D1%3Bbr.com.benhurqs.prefetch.activity
+
+    You can also add your credentials to an existing key, using this line:
+    11:C4:40:66:AE:7A:D1:EA:88:B1:8D:FA:1D:45:A5:F7:FF:A5:FC:D1;br.com.benhurqs.prefetch.activity
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+        
+         */
+        public static final int google_maps_key_instructions=0x7f060016;
+        public static final int host_name=0x7f060017;
+        public static final int key=0x7f060018;
+        public static final int key_error=0x7f060019;
+        public static final int license_no_succeeded=0x7f06001a;
+        public static final int license_succeeded=0x7f06001b;
+        public static final int map_pref=0x7f06001c;
+        public static final int map_type=0x7f06001d;
+        public static final int maps=0x7f06001e;
+        public static final int maps_path=0x7f06001f;
+        public static final int my_maps=0x7f060020;
+        public static final int off_map=0x7f060021;
+        public static final int off_map_preference=0x7f060022;
+        public static final int off_map_summary=0x7f060023;
+        public static final int point_pref=0x7f060024;
+        public static final int prefech_progress_network_error=0x7f060025;
+        public static final int prefech_progress_success=0x7f060026;
+        public static final int prefech_progress_title=0x7f060027;
+        public static final int prefech_progress_txt_bar=0x7f060028;
+        public static final int prefech_success=0x7f060029;
+        public static final int prefetch=0x7f06002a;
+        public static final int prefetch_msg=0x7f06002b;
+        public static final int sd_full_txt=0x7f06002c;
+        public static final int sd_path=0x7f06002d;
+        public static final int sd_warning=0x7f06002e;
+        public static final int settings=0x7f06002f;
+        public static final int settings_map=0x7f060030;
+        public static final int tile_path=0x7f060031;
+        public static final int tile_url=0x7f060032;
+        public static final int title_activity_google_maps=0x7f060033;
+        public static final int title_activity_maps=0x7f060034;
+        public static final int top_left_x=0x7f060035;
+        public static final int top_left_y=0x7f060036;
+        public static final int txt_no=0x7f060037;
+        public static final int txt_yes=0x7f060038;
+    }
+    public static final class style {
+        public static final int CustomActionBarTheme=0x7f070000;
+        public static final int MyActionBar=0x7f070001;
+        public static final int MyActionBarTitleText=0x7f070002;
     }
     public static final class xml {
         public static final int settings_pref=0x7f040000;

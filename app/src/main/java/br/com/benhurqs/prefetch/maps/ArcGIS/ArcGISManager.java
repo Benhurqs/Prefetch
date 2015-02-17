@@ -1,8 +1,5 @@
 package br.com.benhurqs.prefetch.maps.ArcGIS;
 
-import java.util.List;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,21 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-import br.com.benhurqs.prefetch.R;
-import br.com.benhurqs.prefetch.SettingsActivity;
-import br.com.benhurqs.prefetch.dialog.AlertUtil;
-import br.com.benhurqs.prefetch.dialog.AlertUtil.AlertListener;
-import br.com.benhurqs.prefetch.maps.ArcGIS.search.ExecuteLocationTask;
-import br.com.benhurqs.prefetch.maps.ArcGIS.search.LocatorListener;
-import br.com.benhurqs.prefetch.preferences.MapsPreferences;
-import br.com.benhurqs.prefetch.preferences.PointsPreferences;
-import br.com.benhurqs.prefetch.util.Dimensions;
-import br.com.benhurqs.prefetch.util.MapTypeUtil;
 
 import com.esri.android.map.GraphicsLayer;
 import com.esri.android.map.LocationService;
-import com.esri.android.map.MapOptions;
-import com.esri.android.map.MapOptions.MapType;
 import com.esri.android.map.MapView;
 import com.esri.android.map.event.OnStatusChangedListener;
 import com.esri.core.geometry.Point;
@@ -36,8 +21,22 @@ import com.esri.core.symbol.SimpleMarkerSymbol;
 import com.esri.core.symbol.TextSymbol;
 import com.esri.core.tasks.geocode.LocatorGeocodeResult;
 
+import java.util.List;
+
+import br.com.benhurqs.prefetch.R;
+import br.com.benhurqs.prefetch.activity.SettingsActivity;
+import br.com.benhurqs.prefetch.dialog.AlertUtil;
+import br.com.benhurqs.prefetch.dialog.AlertUtil.AlertListener;
+import br.com.benhurqs.prefetch.helpers.SuperUI;
+import br.com.benhurqs.prefetch.maps.ArcGIS.search.ExecuteLocationTask;
+import br.com.benhurqs.prefetch.maps.ArcGIS.search.LocatorListener;
+import br.com.benhurqs.prefetch.preferences.MapsPreferences;
+import br.com.benhurqs.prefetch.preferences.PointsPreferences;
+import br.com.benhurqs.prefetch.util.Dimensions;
+import br.com.benhurqs.prefetch.util.MapTypeUtil;
+
 @SuppressWarnings("deprecation")
-public class ArcGISManager extends Activity implements LocatorListener {
+public class ArcGISManager extends SuperUI implements LocatorListener {
 
 	public static final String KEY_LATLNG_TOP_X = "KEY_LATLNG_TOP_X" ;
 	public static final String KEY_LATLNG_TOP_Y = "KEY_LATLNG_TOP_Y" ;
@@ -53,13 +52,6 @@ public class ArcGISManager extends Activity implements LocatorListener {
 
 	private PointsPreferences pointsPreferences;
 	private MapsPreferences mapsPreferences;
-
-	// Create MapOptions for each type of basemap.
-	final MapOptions mTopoBasemap = new MapOptions(MapType.TOPO);
-	final MapOptions mStreetsBasemap = new MapOptions(MapType.STREETS);
-	final MapOptions mGrayBasemap = new MapOptions(MapType.GRAY);
-	final MapOptions mOceansBasemap = new MapOptions(MapType.OCEANS);
-	final MapOptions mSatteliteBaseMap = new MapOptions(MapType.SATELLITE);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
