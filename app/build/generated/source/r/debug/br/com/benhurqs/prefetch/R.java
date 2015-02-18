@@ -1742,7 +1742,7 @@ containing a value of this type.
         public static final int dialog=0x7f0b0020;
         public static final int disableHome=0x7f0b000c;
         public static final int donate_with_google=0x7f0b002e;
-        public static final int downlaod=0x7f0b0079;
+        public static final int downlaod=0x7f0b007a;
         public static final int dropdown=0x7f0b0021;
         public static final int edit_query=0x7f0b0047;
         public static final int edt_value=0x7f0b0059;
@@ -1768,7 +1768,7 @@ containing a value of this type.
         public static final int match_parent=0x7f0b002a;
         public static final int middle=0x7f0b0015;
         public static final int monochrome=0x7f0b0031;
-        public static final int my_maps=0x7f0b007a;
+        public static final int my_maps=0x7f0b0079;
         public static final int never=0x7f0b001e;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;

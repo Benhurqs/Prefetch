@@ -1,8 +1,5 @@
 package br.com.benhurqs.prefetch.maps.ArcGIS.progress;
 
-import java.io.File;
-import java.util.ArrayList;
-
 import android.app.DialogFragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -18,13 +15,18 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.io.File;
+import java.util.ArrayList;
+
+import br.com.benhurqs.prefetch.R;
+import br.com.benhurqs.prefetch.directory.FileManager;
 import br.com.benhurqs.prefetch.maps.ArcGIS.ArcGISManager;
 import br.com.benhurqs.prefetch.model.TilePoint;
 import br.com.benhurqs.prefetch.tiles.TileFinder;
 import br.com.benhurqs.prefetch.tiles.TilesUtils;
 import br.com.benhurqs.prefetch.util.DownLoadImageTask;
 import br.com.benhurqs.prefetch.util.NetworkUtil;
-import br.com.benhurqs.prefetch.R;
 
 public class ArcgisPrefechProgress extends DialogFragment implements OnClickListener {
 	
@@ -34,7 +36,7 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 	private static double KEY_LATLNG_TOP_Y;
 	private static double KEY_LATLNG_BOTTOM_X;
 	private static double KEY_LATLNG_BOTTOM_Y;
-	private static final int MAX_ZOOM = 20;
+	private static final int MAX_ZOOM = 5;
 	private static final int MIN_ZOOM = 0;
 	private static int START_ZOOM = 0;
 	
@@ -270,8 +272,9 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 	 private boolean fileExist(  int zoom ,  long y ,  long x )
 	 {
 		 
-		 String tileUrl = getString(R.string.tile_path,zoom,y) +"/"+ x +".jpg";
-		 File tile = new File(tileUrl);
+//		 String tileUrl = getString(R.string.tile_path,zoom,y) +"/"+ x +".jpg";
+         String tileUrl = FileManager.getFile("Maps") + "/" + zoom + "/" + y + "/" + x +".jpg";
+         File tile = new File(tileUrl);
 		 if( tile.exists() )
 			 return true;
 		 else

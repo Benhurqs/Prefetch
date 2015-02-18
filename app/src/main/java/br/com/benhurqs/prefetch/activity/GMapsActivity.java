@@ -8,8 +8,11 @@ import android.view.MenuItem;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.TileOverlayOptions;
 
 import br.com.benhurqs.prefetch.R;
+import br.com.benhurqs.prefetch.directory.FileManager;
+import br.com.benhurqs.prefetch.googleMaps.provider.CustomMapTileProvider;
 
 public class GMapsActivity extends FragmentActivity {
 
@@ -64,7 +67,13 @@ public class GMapsActivity extends FragmentActivity {
      */
     private void setUpMap() {
         mMap.setMyLocationEnabled(true);
-//        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+
+        mMap.addTileOverlay(new TileOverlayOptions().tileProvider(
+                new CustomMapTileProvider(FileManager.getFile("Maps"))));
+
+//        CameraUpdate upd = CameraUpdateFactory.newLatLngZoom(new LatLng(LAT, LON), ZOOM);
+//        mMap.moveCamera(upd);
     }
 
     @Override
@@ -76,9 +85,6 @@ public class GMapsActivity extends FragmentActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-//		case R.id.arcgis_key:
-//			showKeyDialog();
-//			return true;
             case R.id.settings:
                 Intent intent = new Intent(this,SettingsActivity.class);
                 startActivity(intent);

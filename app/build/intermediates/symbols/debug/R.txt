@@ -478,7 +478,7 @@ int id deleteTxt 0x7f0b0067
 int id dialog 0x7f0b0020
 int id disableHome 0x7f0b000c
 int id donate_with_google 0x7f0b002e
-int id downlaod 0x7f0b0079
+int id downlaod 0x7f0b007a
 int id dropdown 0x7f0b0021
 int id edit_query 0x7f0b0047
 int id edt_value 0x7f0b0059
@@ -504,7 +504,7 @@ int id maps_type 0x7f0b0073
 int id match_parent 0x7f0b002a
 int id middle 0x7f0b0015
 int id monochrome 0x7f0b0031
-int id my_maps 0x7f0b007a
+int id my_maps 0x7f0b0079
 int id never 0x7f0b001e
 int id none 0x7f0b000e
 int id normal 0x7f0b000a

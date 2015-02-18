@@ -1,15 +1,15 @@
 package br.com.benhurqs.prefetch.util;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.util.Log;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import br.com.benhurqs.prefetch.R;
-
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.util.Log;
+import br.com.benhurqs.prefetch.directory.FileManager;
 
 public class TileFileHandler {
 	
@@ -44,8 +44,10 @@ public class TileFileHandler {
 	    public static  File getOutputMediaFile( String zoom ,String y, String x , Context ctx ){
 
 
-	        File mediaStorageDir = new File(ctx.getString(R.string.tile_path,zoom,y) );
+//	        File mediaStorageDir = new File(ctx.getString(R.string.tile_path,zoom,y) );
 	        //File mediaStorageDir = new File("/storage/sdcard1/Raven");
+            File mediaStorageDir = new File(
+                    FileManager.getFile("Maps").getPath() + File.separator + zoom + File.separator + y) ;
 
 	        if (! mediaStorageDir.exists()){
 	            if (! mediaStorageDir.mkdirs())
