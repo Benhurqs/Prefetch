@@ -59,5 +59,6 @@
     <string name="sd_warning">Atenção</string>
     <string name="title_activity_google_maps">Map</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_gmaps">Map</string>
 
 </resources>

@@ -52,6 +52,6 @@
             android:id="@+id/find"
             android:showAsAction="always"
             android:icon="@android:drawable/ic_menu_search"
-            />
+            android:title="@string/find"/>
 
 </menu><!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/menu/menu.xml -->

@@ -15,6 +15,10 @@ ADDED from AndroidManifest.xml:2:1
 		INJECTED from AndroidManifest.xml:0:0
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
+MERGED from com.google.android.gms:play-services:6.5.87:18:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:appcompat-v7:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:9:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -71,6 +75,10 @@ ADDED from AndroidManifest.xml:30:5
 		ADDED from AndroidManifest.xml:30:30
 application
 ADDED from AndroidManifest.xml:32:5
+MERGED from com.google.android.gms:play-services:6.5.87:20:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:appcompat-v7:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
 	android:label
 		ADDED from AndroidManifest.xml:35:9
 	android:allowBackup
@@ -79,7 +87,7 @@ ADDED from AndroidManifest.xml:32:5
 		ADDED from AndroidManifest.xml:34:9
 	android:theme
 		ADDED from AndroidManifest.xml:36:9
-activity#br.com.benhurqs.prefetch.activity.ArcGISActivity
+activity#br.com.benhurqs.prefetch.activity.GMapsActivity
 ADDED from AndroidManifest.xml:37:9
 	android:label
 		ADDED from AndroidManifest.xml:39:13
@@ -101,3 +109,22 @@ ADDED from AndroidManifest.xml:46:9
 		ADDED from AndroidManifest.xml:48:13
 	android:name
 		ADDED from AndroidManifest.xml:47:13
+meta-data#com.google.android.gms.version
+ADDED from AndroidManifest.xml:51:9
+MERGED from com.google.android.gms:play-services:6.5.87:21:9
+	android:name
+		ADDED from AndroidManifest.xml:52:13
+	android:value
+		ADDED from AndroidManifest.xml:53:13
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from AndroidManifest.xml:54:9
+	android:name
+		ADDED from AndroidManifest.xml:55:13
+	android:value
+		ADDED from AndroidManifest.xml:56:13
+activity#br.com.benhurqs.prefetch.activity.ArcGISActivity
+ADDED from AndroidManifest.xml:58:9
+	android:label
+		ADDED from AndroidManifest.xml:60:13
+	android:name
+		ADDED from AndroidManifest.xml:59:13
