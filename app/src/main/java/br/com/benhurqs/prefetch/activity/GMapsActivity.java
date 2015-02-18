@@ -8,8 +8,6 @@ import android.view.MenuItem;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import br.com.benhurqs.prefetch.R;
 
@@ -65,7 +63,8 @@ public class GMapsActivity extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.setMyLocationEnabled(true);
+//        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
 
     @Override
@@ -83,10 +82,13 @@ public class GMapsActivity extends FragmentActivity {
             case R.id.settings:
                 Intent intent = new Intent(this,SettingsActivity.class);
                 startActivity(intent);
+//                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 return true;
             case R.id.downlaod:
                 Intent arcgis = new Intent(this,ArcGISActivity.class);
+                arcgis.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(arcgis);
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
