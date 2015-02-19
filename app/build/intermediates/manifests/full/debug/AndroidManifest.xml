@@ -59,6 +59,10 @@
             android:name="br.com.benhurqs.prefetch.activity.ArcGISActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="br.com.benhurqs.prefetch.activity.MyMapsActivity"
+            android:label="@string/my_maps_activity" >
+        </activity>
     </application>
 
 </manifest>

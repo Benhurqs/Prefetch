@@ -19,7 +19,7 @@ public class AlertUtil {
 	}
 	
 	@SuppressLint("InflateParams")
-	public static void showdialogAlert(Activity activity, String title, String msg, final AlertListener listener) {
+	public static void showDialogFindAlert(Activity activity, String title, String msg, final AlertListener listener) {
 		LayoutInflater inflater = activity.getLayoutInflater();
 		View dialoglayout = inflater.inflate(R.layout.dialog_layout, null);
 		AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
@@ -59,5 +59,46 @@ public class AlertUtil {
 
 		optionDialog.show();
 	}
+
+    @SuppressLint("InflateParams")
+    public static void showDialogAlert(Activity activity, String title, String msg, final AlertListener listener) {
+        LayoutInflater inflater = activity.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_layout, null);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+        dialog.setView(dialoglayout);
+        dialog.setCancelable(true);
+
+        final AlertDialog optionDialog = dialog.create();
+
+        TextView txtAlert = (TextView) dialoglayout.findViewById(R.id.txt_dialog_msg);
+        txtAlert.setText(msg.toString().trim());
+
+        TextView txtTitle = (TextView) dialoglayout.findViewById(R.id.txt_dialog_title);
+        txtTitle.setText(title.toString().trim());
+
+        final EditText edtText = (EditText) dialoglayout.findViewById(R.id.edt_value);
+
+        Button btnOk = (Button) dialoglayout.findViewById(R.id.btnOk);
+        btnOk.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                optionDialog.dismiss();
+                listener.onClickOk(edtText.getText().toString().trim());
+            }
+        });
+
+        Button btnCancel = (Button) dialoglayout.findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                optionDialog.dismiss();
+            }
+        });
+
+        optionDialog.show();
+    }
+
 
 }

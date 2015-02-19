@@ -17,10 +17,10 @@ public class TileFileHandler {
 	public static final String TILE_FILE_PATH = "";
 	
 	
-	   public static boolean storeTile( Bitmap tile ,String zoom, String y , String x , Context ctx)
+	   public static boolean storeTile( String path, Bitmap tile ,String zoom, String y , String x , Context ctx)
 	    {
 
-	        File pictureFile = getOutputMediaFile(zoom,y,x,ctx);
+	        File pictureFile = getOutputMediaFile(path,zoom,y,x,ctx);
 	        if (pictureFile == null) {
 	            Log.d("Erro","Erro diretorio null");// e.getMessage());
 	            return false;
@@ -41,13 +41,13 @@ public class TileFileHandler {
 	    }
 	   
 	   
-	    public static  File getOutputMediaFile( String zoom ,String y, String x , Context ctx ){
+	    public static  File getOutputMediaFile( String path,String zoom ,String y, String x , Context ctx ){
 
 
 //	        File mediaStorageDir = new File(ctx.getString(R.string.tile_path,zoom,y) );
 	        //File mediaStorageDir = new File("/storage/sdcard1/Raven");
             File mediaStorageDir = new File(
-                    PathManager.getFile("Maps").getPath() + File.separator + zoom + File.separator + y) ;
+                    PathManager.getFile(path).getPath() + File.separator + zoom + File.separator + y) ;
 
 	        if (! mediaStorageDir.exists()){
 	            if (! mediaStorageDir.mkdirs())

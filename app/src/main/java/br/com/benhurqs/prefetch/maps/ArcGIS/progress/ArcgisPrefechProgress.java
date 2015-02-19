@@ -51,6 +51,12 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 	private static int currentZoom = 0;
 	private static int currentMaxProgress = 0;
 	private static int currentProgress = 0;
+
+    private static String path;
+
+    public ArcgisPrefechProgress(String name){
+        path = name;
+    }
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -211,7 +217,7 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 						
 						if( !fileExist(i, tilePoint.getY(), tilePoint.getX())  ) 
 						{
-							if( !DownLoadImageTask.fechTile(i, tilePoint.getY(), tilePoint.getX(), rootView.getContext()) )
+							if( !DownLoadImageTask.fechTile(path, i, tilePoint.getY(), tilePoint.getX(), rootView.getContext()) )
 							{
 								return PROGRESS_STATUS_NETWORK_FAILURE;
 							}
@@ -273,7 +279,7 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 	 {
 		 
 //		 String tileUrl = getString(R.string.tile_path,zoom,y) +"/"+ x +".jpg";
-         String tileUrl = PathManager.getFile("Maps") + "/" + zoom + "/" + y + "/" + x +".jpg";
+         String tileUrl = PathManager.getFile(path) + "/" + zoom + "/" + y + "/" + x +".jpg";
          File tile = new File(tileUrl);
 		 if( tile.exists() )
 			 return true;

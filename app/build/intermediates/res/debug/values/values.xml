@@ -179,6 +179,12 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <item name="dialog_fixed_width_major" type="dimen">320dp</item>
@@ -231,6 +237,7 @@
     <string name="accept">Accept</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="action_settings">Settings</string>
     <string name="action_title">Raven</string>
     <string name="app_name">Prefetch</string>
     <string name="arcgis_key">Preencha com a chave do ArcGis.</string>
@@ -303,6 +310,9 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
     AIzaSyATEJ5kYrLFPjea_0q8a_Mn4tZDlnmC4Gk
         -->
     </string>
+    <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="hello_world">Hello world!</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/urls.xml -->
     <eat-comment/>
     <string name="host_name">http://services.arcgisonline.com/ArcGIS/rest/services</string>
@@ -314,6 +324,7 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
     <string name="license_succeeded">Licença autorizada.</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/preferences.xml -->
     <eat-comment/>
+    <string name="map_name">map_name</string>
     <string name="map_pref">map_preferences</string>
     <string name="map_type">map_type</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/strings.xml -->
@@ -321,6 +332,9 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
     <string name="maps">Mapa</string>
     <string name="maps_path">/storage/sdcard1/Raven/Maps</string>
     <string name="my_maps">Meus mapas</string>
+    <string name="my_maps_activity">Meus Mapas</string>
+    <string name="my_maps_subtitle">Selecione o mapa de deseja visualizar.</string>
+    <string name="name_prefetch">Escolha um nome para salvar o mapa.</string>
     <string name="off_map">Mapa Offline</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/preferences.xml -->
     <eat-comment/>
@@ -360,6 +374,7 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
     <string name="title_activity_gmaps">Map</string>
     <string name="title_activity_google_maps">Map</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_my_maps">MyMapsActivity</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/preferences.xml -->
     <eat-comment/>
     <string name="top_left_x">top_left_x</string>

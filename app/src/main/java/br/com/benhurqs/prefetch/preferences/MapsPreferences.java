@@ -7,6 +7,7 @@ import br.com.benhurqs.prefetch.util.MapTypeUtil;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 public class MapsPreferences {
 	
@@ -30,5 +31,20 @@ public class MapsPreferences {
 		String mapType = preferences.getString(context.getString(R.string.map_pref), String.valueOf(MapTypeUtil.SATELLITE));
 		return MapTypeUtil.getMapType(Integer.valueOf(mapType));
 	}
+
+    public void saveMapName(String mapName){
+        if(mapName == null || mapName.equalsIgnoreCase("")){
+            return;
+        }
+        Log.e("salvei  ", mapName);
+        SharedPreferences.Editor editorName = preferences.edit();
+        editorName.putString(context.getString(R.string.map_name), String.valueOf(mapName));
+        editorName.commit();
+    }
+
+    public String getMyMapName(){
+        String mapName = preferences.getString(context.getString(R.string.map_name), null);
+        return mapName;
+    }
 
 }

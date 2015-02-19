@@ -78,14 +78,14 @@ public class DownLoadImageTask  {
 
 
 
-	public static boolean fechTile(  final int zoom , final long y , final long x , final Context ctx ) {
+	public static boolean fechTile( String pathName, final int zoom , final long y , final long x , final Context ctx ) {
 		String tileUrl = ctx.getString( R.string.tile_url,  ctx.getString(R.string.host_name),zoom,y,x ) ;
 
 		try {
 
 			Bitmap tileBmp = DownLoadImageTask.getBitmapFromURL(tileUrl);
 			if( tileBmp != null ){
-				return  TileFileHandler.storeTile( tileBmp , String.valueOf(zoom) , String.valueOf(y) , String.valueOf(x) , ctx );
+				return  TileFileHandler.storeTile( pathName, tileBmp , String.valueOf(zoom) , String.valueOf(y) , String.valueOf(x) , ctx );
 			}else{
 				return false;
 			}

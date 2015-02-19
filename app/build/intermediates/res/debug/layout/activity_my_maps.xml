@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/title_rect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#0098d9" >
+
+        <TextView
+            android:id="@+id/txt_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dfdfdf"
+            android:padding="16dp"
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:visibility="visible"
+            android:text="@string/my_maps_subtitle"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_my_maps"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_rect">
+    </ListView>
+
+
+
+</RelativeLayout><!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/layout/activity_my_maps.xml -->

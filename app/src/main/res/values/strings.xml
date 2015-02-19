@@ -3,6 +3,7 @@
 
     <string name="app_name">Prefetch</string>
     <string name="action_title">Raven</string>
+    <string name="my_maps_activity">Meus Mapas</string>
 
     <!-- basemap menu items -->
     <string name="StreetMapMenu">Streets</string>
@@ -36,6 +37,7 @@
     <string name="prefetch">Prefetch</string>
 
     <!-- dialog -->
+    <string name="name_prefetch">Escolha um nome para salvar o mapa.</string>
     <string name="arcgis_key">Preencha com a chave do ArcGis.</string>
     <string name="key_error">Chave inválida.</string>
     <string name="find_address">Preencha com o local que deseja fazer o prefetch.</string>
@@ -60,5 +62,10 @@
     <string name="title_activity_google_maps">Map</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_gmaps">Map</string>
+    <string name="title_activity_my_maps">MyMapsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="my_maps_subtitle">Selecione o mapa de deseja visualizar.</string>
+
 
 </resources>

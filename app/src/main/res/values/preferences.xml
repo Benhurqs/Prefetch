@@ -11,6 +11,7 @@
     <!-- Maps preferences -->
     <string name="map_pref">map_preferences</string>
     <string name="map_type">map_type</string>
+    <string name="map_name">map_name</string>
     
     <!-- ArcGis -->
     <string name="arcgis_key_map">arcgis_key_preference</string>

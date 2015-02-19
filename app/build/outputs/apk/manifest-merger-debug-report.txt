@@ -128,3 +128,9 @@ ADDED from AndroidManifest.xml:58:9
 		ADDED from AndroidManifest.xml:60:13
 	android:name
 		ADDED from AndroidManifest.xml:59:13
+activity#br.com.benhurqs.prefetch.activity.MyMapsActivity
+ADDED from AndroidManifest.xml:62:9
+	android:label
+		ADDED from AndroidManifest.xml:64:13
+	android:name
+		ADDED from AndroidManifest.xml:63:13

@@ -1,6 +1,5 @@
 package br.com.benhurqs.prefetch.directory;
 
-import android.graphics.Path;
 import android.os.Environment;
 
 import java.io.File;
@@ -56,8 +55,6 @@ public class PathManager {
 
     public static boolean deleteFolder(String folder){
         init();
-//        File deletDirectory = new File(getPrefetchPath().getPath()
-//                + File.pathSeparator + folder);
 
         File deletDirectory = new File(getPrefetchPath()
                 + File.pathSeparator + folder);
@@ -90,4 +87,19 @@ public class PathManager {
         return file;
 
     }
+
+    public static String[] getMaps(){
+        init();
+        return getPrefetchFile().list();
+    }
+
+    public static String getMapName(int position){
+        init();
+        if(getPrefetchFile().list().length > position){
+            return getPrefetchFile().list()[position];
+        }
+
+        return null;
+    }
+
 }

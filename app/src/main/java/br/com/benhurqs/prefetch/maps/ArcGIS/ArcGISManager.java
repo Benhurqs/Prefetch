@@ -30,6 +30,7 @@ import br.com.benhurqs.prefetch.activity.SettingsActivity;
 import br.com.benhurqs.prefetch.dialog.AlertUtil;
 import br.com.benhurqs.prefetch.dialog.AlertUtil.AlertListener;
 import br.com.benhurqs.prefetch.helpers.SuperUI;
+import br.com.benhurqs.prefetch.json.obj.MapsDataObj;
 import br.com.benhurqs.prefetch.maps.ArcGIS.progress.ArcgisPrefechProgress;
 import br.com.benhurqs.prefetch.maps.ArcGIS.search.ExecuteLocationTask;
 import br.com.benhurqs.prefetch.maps.ArcGIS.search.LocatorListener;
@@ -157,7 +158,7 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
 //	}
 
     public void showFindDialog() {
-        AlertUtil.showdialogAlert(this,
+        AlertUtil.showDialogFindAlert(this,
                 getResources().getString(R.string.find), getResources().getString(R.string.find_address),
                 new AlertListener() {
 
@@ -205,7 +206,7 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
         mMapView.setMapOptions(mapsPreferences.getMapType());
     }
 
-    public void startPreftch() {
+    public void startPreftch(String name) {
 
 //        addMarker(mMapView.toMapPoint(pointsPreferences.getTopLeftX(), pointsPreferences.getTopLeftY()));
 //        addMarker(mMapView.toMapPoint(pointsPreferences.getBottomRightX(), pointsPreferences.getBottomRightY()));
@@ -216,15 +217,26 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
 //        Point topLeft = mMapView.toMapPoint(255, 255);
 //        Point bottomRight = mMapView.toMapPoint(1695, 781);
 
+
+
         Point topLeft = mMapView.toMapPoint(pointsPreferences.getTopLeftX(), pointsPreferences.getTopLeftY());
         Point bottomRight = mMapView.toMapPoint(pointsPreferences.getBottomRightX(), pointsPreferences.getBottomRightY());
+        Point center =  mMapView.toMapPoint(
+                (pointsPreferences.getTopLeftX() + pointsPreferences.getBottomRightX())/2,
+                (pointsPreferences.getTopLeftY() + pointsPreferences.getBottomRightY())/2);
 
         SpatialReference sp = SpatialReference.create(SpatialReference.WKID_WGS84);
         Point latlngTop = (Point) GeometryEngine.project(topLeft, mMapView.getSpatialReference(), sp);
         Point latlngBottom = (Point) GeometryEngine.project(bottomRight, mMapView.getSpatialReference(), sp);
+        Point latlngCenter = (Point) GeometryEngine.project(center, mMapView.getSpatialReference(), sp);
 
+        MapsDataObj obj = new MapsDataObj();
+        obj.setName(name.toString().trim());
+        obj.setLat(latlngCenter.getX());
+        obj.setLng(latlngCenter.getY());
+        obj.setMaxZoom(5);
 
-        ArcgisPrefechProgress prefechProgress = new ArcgisPrefechProgress();
+        ArcgisPrefechProgress prefechProgress = new ArcgisPrefechProgress(name);
 
         Bundle prefechArguments = new Bundle();
         if (latlngTop != null && latlngBottom != null) {
@@ -315,8 +327,21 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
         //			ynd.show( activity.getFragmentManager(), "clearMission");
         //		}
         //		else{
-        startPreftch();
+
         //		}
+
+        AlertUtil.showDialogFindAlert(this,
+                getResources().getString(R.string.app_name), getResources().getString(R.string.name_prefetch),
+                new AlertListener() {
+
+                    @Override
+                    public void onClickOk(String name) {
+                        if (name == null || name.equalsIgnoreCase("")) {
+                            return;
+                        }
+                        startPreftch(name);
+                    }
+                });
     }
 
 
