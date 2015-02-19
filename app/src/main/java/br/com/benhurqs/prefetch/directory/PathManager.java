@@ -1,5 +1,6 @@
 package br.com.benhurqs.prefetch.directory;
 
+import android.graphics.Path;
 import android.os.Environment;
 
 import java.io.File;
@@ -7,15 +8,25 @@ import java.io.File;
 /**
  * Created by benhur on 18/02/15.
  */
-public class FileManager {
+public class PathManager {
 
     public static File directory;
     public static String PATH = "/Prefetch";
 
-    public static  File getPrefetchPath(){
+    public static  File getPrefetchFile(){
         init();
         return directory;
     }
+
+    public static String getPrefetchPath(){
+        if(Environment.getExternalStorageState() == null){
+            return Environment.getDataDirectory()
+                    + PATH;
+        }
+        return  Environment.getExternalStorageDirectory()
+                + PATH;
+    }
+
 
     public static void init(){
         //if there is no SD card, create new directory objects to make directory on device
@@ -45,7 +56,10 @@ public class FileManager {
 
     public static boolean deleteFolder(String folder){
         init();
-        File deletDirectory = new File(getPrefetchPath().getPath()
+//        File deletDirectory = new File(getPrefetchPath().getPath()
+//                + File.pathSeparator + folder);
+
+        File deletDirectory = new File(getPrefetchPath()
                 + File.pathSeparator + folder);
 
         if (deletDirectory.exists()) {
@@ -64,7 +78,7 @@ public class FileManager {
 
     public static File getFile(String folder){
         init();
-        File file = new File(getPrefetchPath().getPath()
+        File file = new File(getPrefetchPath()
                 + "/" + folder);
 
         // if no directory exists, create new directory to store test

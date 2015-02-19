@@ -3,4 +3,4 @@
     android:layout_height="match_parent" android:id="@+id/map"
     tools:context="br.com.benhurqs.prefetch.activity.GMapsActivity"
     android:name="com.google.android.gms.maps.SupportMapFragment" />
-<!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/layout/activity_gmaps.xml -->
+<!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/layout/activity_gmaps.xml -->

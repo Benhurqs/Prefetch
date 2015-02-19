@@ -8,11 +8,13 @@ import android.view.MenuItem;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.TileOverlay;
 import com.google.android.gms.maps.model.TileOverlayOptions;
 
 import br.com.benhurqs.prefetch.R;
-import br.com.benhurqs.prefetch.directory.FileManager;
+import br.com.benhurqs.prefetch.directory.PathManager;
 import br.com.benhurqs.prefetch.googleMaps.provider.CustomMapTileProvider;
+import br.com.benhurqs.prefetch.googleMaps.provider.LocalMapTileProvider;
 
 public class GMapsActivity extends FragmentActivity {
 
@@ -67,13 +69,23 @@ public class GMapsActivity extends FragmentActivity {
      */
     private void setUpMap() {
         mMap.setMyLocationEnabled(true);
-        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
-
-        mMap.addTileOverlay(new TileOverlayOptions().tileProvider(
-                new CustomMapTileProvider(FileManager.getFile("Maps"))));
+//        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+//
+//        mMap.addTileOverlay(new TileOverlayOptions().tileProvider(
+//                new CustomMapTileProvider(PathManager.getFile("Maps"))));
 
 //        CameraUpdate upd = CameraUpdateFactory.newLatLngZoom(new LatLng(LAT, LON), ZOOM);
 //        mMap.moveCamera(upd);
+
+        setupOfflineMapOverlay();
+    }
+
+    private void setupOfflineMapOverlay() {
+        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+        TileOverlay tileOverlay = mMap
+                .addTileOverlay(new TileOverlayOptions().tileProvider(new LocalMapTileProvider("Maps")));
+        tileOverlay.setZIndex(-1);
+        tileOverlay.clearTileCache();
     }
 
     @Override

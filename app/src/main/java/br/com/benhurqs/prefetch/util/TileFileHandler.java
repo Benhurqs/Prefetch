@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import br.com.benhurqs.prefetch.directory.FileManager;
+import br.com.benhurqs.prefetch.directory.PathManager;
 
 public class TileFileHandler {
 	
@@ -47,7 +47,7 @@ public class TileFileHandler {
 //	        File mediaStorageDir = new File(ctx.getString(R.string.tile_path,zoom,y) );
 	        //File mediaStorageDir = new File("/storage/sdcard1/Raven");
             File mediaStorageDir = new File(
-                    FileManager.getFile("Maps").getPath() + File.separator + zoom + File.separator + y) ;
+                    PathManager.getFile("Maps").getPath() + File.separator + zoom + File.separator + y) ;
 
 	        if (! mediaStorageDir.exists()){
 	            if (! mediaStorageDir.mkdirs())

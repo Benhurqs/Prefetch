@@ -20,7 +20,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 import br.com.benhurqs.prefetch.R;
-import br.com.benhurqs.prefetch.directory.FileManager;
+import br.com.benhurqs.prefetch.directory.PathManager;
 import br.com.benhurqs.prefetch.maps.ArcGIS.ArcGISManager;
 import br.com.benhurqs.prefetch.model.TilePoint;
 import br.com.benhurqs.prefetch.tiles.TileFinder;
@@ -273,7 +273,7 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 	 {
 		 
 //		 String tileUrl = getString(R.string.tile_path,zoom,y) +"/"+ x +".jpg";
-         String tileUrl = FileManager.getFile("Maps") + "/" + zoom + "/" + y + "/" + x +".jpg";
+         String tileUrl = PathManager.getFile("Maps") + "/" + zoom + "/" + y + "/" + x +".jpg";
          File tile = new File(tileUrl);
 		 if( tile.exists() )
 			 return true;

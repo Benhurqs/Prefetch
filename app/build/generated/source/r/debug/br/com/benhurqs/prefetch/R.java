@@ -1948,6 +1948,8 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
 
     Once you have your key (it starts with "AIza"), replace the "google_maps_key"
     string in this file.
+
+    AIzaSyATEJ5kYrLFPjea_0q8a_Mn4tZDlnmC4Gk
         
          */
         public static final int google_maps_key_instructions=0x7f0d0046;

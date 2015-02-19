@@ -129,4 +129,4 @@
     <include layout="@layout/prefech_success" android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/prefechSuccess" android:visibility="gone"/>
 
-</RelativeLayout><!-- From: file:/home/benhur/Projetos/Prefetch/app/src/main/res/layout/prefech_progress.xml -->
+</RelativeLayout><!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/layout/prefech_progress.xml -->
