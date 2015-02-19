@@ -1700,11 +1700,11 @@ containing a value of this type.
     }
     public static final class id {
         public static final int Gray=0x7f0b0072;
-        public static final int Hybrid_map=0x7f0b0077;
-        public static final int NatGeo_map=0x7f0b0078;
-        public static final int OSM_Map=0x7f0b0079;
+        public static final int Hybrid_map=0x7f0b0078;
+        public static final int NatGeo_map=0x7f0b0079;
+        public static final int OSM_Map=0x7f0b007a;
         public static final int Ocean_Basemap=0x7f0b0073;
-        public static final int Satellite_Map=0x7f0b0076;
+        public static final int Satellite_Map=0x7f0b0077;
         public static final int World_Street_Map=0x7f0b0070;
         public static final int World_Topo=0x7f0b0071;
         public static final int actionBtnLayout=0x7f0b006a;
@@ -1721,7 +1721,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0b0042;
         public static final int action_mode_bar_stub=0x7f0b0041;
         public static final int action_mode_close_button=0x7f0b0034;
-        public static final int action_settings=0x7f0b007b;
+        public static final int action_settings=0x7f0b007c;
         public static final int activity_chooser_view_content=0x7f0b0035;
         public static final int adjust_height=0x7f0b0016;
         public static final int adjust_width=0x7f0b0017;
@@ -1741,18 +1741,19 @@ containing a value of this type.
         public static final int collapseActionView=0x7f0b001c;
         public static final int decor_content_parent=0x7f0b0043;
         public static final int default_activity_button=0x7f0b0038;
+        public static final int delete=0x7f0b0074;
         public static final int deleteTxt=0x7f0b0069;
         public static final int dialog=0x7f0b0020;
         public static final int disableHome=0x7f0b000c;
         public static final int donate_with_google=0x7f0b002e;
-        public static final int downlaod=0x7f0b007d;
+        public static final int downlaod=0x7f0b007e;
         public static final int dropdown=0x7f0b0021;
         public static final int edit_query=0x7f0b0047;
         public static final int edt_value=0x7f0b005b;
         public static final int end=0x7f0b0014;
         public static final int expand_activities_button=0x7f0b0036;
         public static final int expanded_menu=0x7f0b003c;
-        public static final int find=0x7f0b007a;
+        public static final int find=0x7f0b007b;
         public static final int grayscale=0x7f0b0030;
         public static final int holo_dark=0x7f0b0023;
         public static final int holo_light=0x7f0b0024;
@@ -1768,11 +1769,11 @@ containing a value of this type.
         public static final int list_item=0x7f0b0039;
         public static final int lv_my_maps=0x7f0b0056;
         public static final int map=0x7f0b0053;
-        public static final int maps_type=0x7f0b0075;
+        public static final int maps_type=0x7f0b0076;
         public static final int match_parent=0x7f0b002a;
         public static final int middle=0x7f0b0015;
         public static final int monochrome=0x7f0b0031;
-        public static final int my_maps=0x7f0b007c;
+        public static final int my_maps=0x7f0b007d;
         public static final int never=0x7f0b001e;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;
@@ -1801,7 +1802,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f0b004e;
         public static final int search_voice_btn=0x7f0b0052;
         public static final int selectionDetails=0x7f0b0029;
-        public static final int settings=0x7f0b0074;
+        public static final int settings=0x7f0b0075;
         public static final int shortcut=0x7f0b003e;
         public static final int showCustom=0x7f0b000f;
         public static final int showHome=0x7f0b0010;
@@ -1865,9 +1866,10 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int basemap_menu=0x7f0f0000;
-        public static final int menu=0x7f0f0001;
-        public static final int menu_my_maps=0x7f0f0002;
-        public static final int menu_offline=0x7f0f0003;
+        public static final int list_select_menu=0x7f0f0001;
+        public static final int menu=0x7f0f0002;
+        public static final int menu_my_maps=0x7f0f0003;
+        public static final int menu_offline=0x7f0f0004;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f060000;
