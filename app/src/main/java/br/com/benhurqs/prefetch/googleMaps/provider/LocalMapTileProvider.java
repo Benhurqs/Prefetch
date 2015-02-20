@@ -1,6 +1,5 @@
 package br.com.benhurqs.prefetch.googleMaps.provider;
 
-import android.graphics.Path;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -9,8 +8,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Locale;
 
-
-import com.google.android.gms.internal.pa;
 import com.google.android.gms.maps.model.Tile;
 import com.google.android.gms.maps.model.TileProvider;
 
@@ -57,7 +54,6 @@ public class LocalMapTileProvider implements TileProvider {
         ByteArrayOutputStream buffer = null;
 
         try {
-//            String patch = DirectoryPath.getMapsPath() + getTileFilename(x, y, zoom);
             String patch = PathManager.getPrefetchPath() + File.separator + path +  File.separator + getTileFilename(x, y, zoom);
             System.out.println( patch );
             in = new FileInputStream(patch);

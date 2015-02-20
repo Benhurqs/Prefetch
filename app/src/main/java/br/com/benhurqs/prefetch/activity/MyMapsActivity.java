@@ -16,14 +16,20 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.io.File;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 import br.com.benhurqs.prefetch.R;
+import br.com.benhurqs.prefetch.adapter.MapsAdapter;
 import br.com.benhurqs.prefetch.directory.PathManager;
 import br.com.benhurqs.prefetch.preferences.MapsPreferences;
+import br.com.benhurqs.prefetch.util.files.FileManager;
 
 public class MyMapsActivity extends Activity implements ListView.MultiChoiceModeListener{
 
     private ListView myMapsList;
+    private ArrayList<String[]> mapsListName;
+    private MapsAdapter myMapsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +43,16 @@ public class MyMapsActivity extends Activity implements ListView.MultiChoiceMode
     }
 
     public void init(){
+        mapsListName = new ArrayList<String[]>();
+
         myMapsList = (ListView)this.findViewById(R.id.lv_my_maps);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, PathManager.getMaps());
+        populateList();
+
+        myMapsAdapter = new MapsAdapter(this, mapsListName);
         myMapsList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
         myMapsList.setMultiChoiceModeListener(this);
-        myMapsList.setAdapter(adapter);
+        myMapsList.setAdapter(myMapsAdapter);
         myMapsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -52,6 +61,14 @@ public class MyMapsActivity extends Activity implements ListView.MultiChoiceMode
                 finish();
             }
         });
+    }
+
+    public void populateList(){
+        for(File mapFile : PathManager.getPrefetchFile().listFiles()){
+            String[] mapName = new String[]{mapFile.getName(), FileManager.getSize(mapFile)};
+            mapsListName.add(mapName);
+        }
+
     }
 
 
@@ -81,7 +98,7 @@ public class MyMapsActivity extends Activity implements ListView.MultiChoiceMode
 
     @Override
     public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-//        myMapsList.setItemSelected(position, checked);
+        myMapsAdapter.setItemSelected(position, checked);
 
         int selectCount = myMapsList.getCheckedItemCount();
 
@@ -141,6 +158,6 @@ public class MyMapsActivity extends Activity implements ListView.MultiChoiceMode
 
     @Override
     public void onDestroyActionMode(ActionMode mode) {
-
+        myMapsAdapter.clearSelected();
     }
 }

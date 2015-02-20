@@ -31,7 +31,10 @@
         android:id="@+id/lv_my_maps"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/title_rect">
+        android:layout_below="@id/title_rect"
+        android:footerDividersEnabled="false"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp">
     </ListView>
 
 

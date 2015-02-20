@@ -1,11 +1,14 @@
 package br.com.benhurqs.prefetch.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,10 +22,10 @@ import br.com.benhurqs.prefetch.R;
 public class MapsAdapter extends BaseAdapter {
 
     private Context context;
-    private ArrayList<String> gridValues;
+    private ArrayList<String[]> gridValues;
     private HashMap<Integer, Boolean> itensSelected = new HashMap<Integer, Boolean>();
 
-    public MapsAdapter(Context context, ArrayList<String> itens){
+    public MapsAdapter(Context context, ArrayList<String[]> itens){
         this.context = context;
         this.gridValues = itens;
 
@@ -61,18 +64,20 @@ public class MapsAdapter extends BaseAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View nameView;
-        nameView = new View(context);
         nameView = inflater.inflate(R.layout.maps_name_item, null);
 
-        LinearLayout layoutSelected = (LinearLayout) nameView.findViewById(R.id.lay_bg);
+        TextView txtName = (TextView) nameView.findViewById(R.id.txt_map_name);
+        txtName.setText(gridValues.get(position)[0]);
+
+        TextView txtSize = (TextView) nameView.findViewById(R.id.txt_map_size);
+        txtSize.setText(gridValues.get(position)[1]);
+
+        RelativeLayout layoutSelected = (RelativeLayout) nameView.findViewById(R.id.lay_bg);
         if(itensSelected.get(position) != null && itensSelected.get(position)){
             layoutSelected.setVisibility(View.VISIBLE);
         }else{
             layoutSelected.setVisibility(View.INVISIBLE);
         }
-
-
-
 
         return nameView;
     }
