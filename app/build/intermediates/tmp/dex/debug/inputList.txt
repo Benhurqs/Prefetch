@@ -1,4 +1,5 @@
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/classes/debug
+/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/core-827666329e1a380eefd801fdd748533f9e60b0d6.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-fd564f72e1e730f4b9accbca63a949e9d6f03a9a.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/arcgis-android-app-toolkit-d23e864873cedf131a7f2387ef2a708d59d4cca7.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-77872fd23edc497f08511ec9852e6e44812bbc3e.jar

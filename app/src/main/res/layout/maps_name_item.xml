@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="50dp">
+    android:layout_height="wrap_content">
 
-
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white">
 
     <TextView
         android:id="@+id/txt_map_name"
@@ -11,15 +14,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_margin="10dp"/>
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:text="Maps"/>
 
     <TextView
         android:id="@+id/txt_map_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/txt_map_name"
         android:layout_centerVertical="true"
-        android:layout_margin="10dp"/>
+        android:layout_marginLeft="5dp"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        android:text="(123MB)"/>
 
     <RelativeLayout
         android:id="@+id/lay_bg"
@@ -29,5 +37,7 @@
         android:visibility="gone">
 
     </RelativeLayout>
+
+        </RelativeLayout>
 
 </RelativeLayout>

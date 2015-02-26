@@ -4,6 +4,7 @@ import br.com.benhurqs.prefetch.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -85,6 +86,41 @@ public class AlertUtil {
             public void onClick(View v) {
                 optionDialog.dismiss();
                 listener.onClickOk(edtText.getText().toString().trim());
+            }
+        });
+
+        Button btnCancel = (Button) dialoglayout.findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                optionDialog.dismiss();
+            }
+        });
+
+        optionDialog.show();
+    }
+
+    @SuppressLint("InflateParams")
+    public static void showDialogDeleteMap(Activity activity, String map_name, final AlertListener listener) {
+        LayoutInflater inflater = activity.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_delete_map, null);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+        dialog.setView(dialoglayout);
+        dialog.setCancelable(true);
+
+        final AlertDialog optionDialog = dialog.create();
+
+        TextView txtAlert = (TextView) dialoglayout.findViewById(R.id.txt_dialog_msg);
+        txtAlert.setText(Html.fromHtml(activity.getString(R.string.deleted_map_name, map_name)));
+
+        Button btnOk = (Button) dialoglayout.findViewById(R.id.btnOk);
+        btnOk.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                optionDialog.dismiss();
+                listener.onClickOk(null);
             }
         });
 

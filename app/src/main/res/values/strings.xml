@@ -51,6 +51,8 @@
     <string name="txt_no">Não</string>
     <string name="deleted_files_progress">%1$s arquivos deletados até o momento.</string>
     <string name="deleting_tiles">Deletando arquivos</string>
+    <string name="deleted_map">Deletar Mapa</string>
+    <string name="deleted_map_name">tem certeza que deseja deletar o mapa <b>%1$s</b>.</string>
 
     <!-- File save directoty -->
 

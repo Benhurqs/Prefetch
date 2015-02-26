@@ -1,9 +1,6 @@
 package br.com.benhurqs.prefetch.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +20,6 @@ public class MapsAdapter extends BaseAdapter {
 
     private Context context;
     private ArrayList<String[]> gridValues;
-    private HashMap<Integer, Boolean> itensSelected = new HashMap<Integer, Boolean>();
 
     public MapsAdapter(Context context, ArrayList<String[]> itens){
         this.context = context;
@@ -48,15 +44,6 @@ public class MapsAdapter extends BaseAdapter {
         return 0;
     }
 
-    public void setItemSelected(int position, boolean value){
-        itensSelected.put(position, value);
-        notifyDataSetChanged();
-    }
-
-    public void clearSelected(){
-        itensSelected.clear();
-        notifyDataSetChanged();
-    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -71,13 +58,6 @@ public class MapsAdapter extends BaseAdapter {
 
         TextView txtSize = (TextView) nameView.findViewById(R.id.txt_map_size);
         txtSize.setText(gridValues.get(position)[1]);
-
-        RelativeLayout layoutSelected = (RelativeLayout) nameView.findViewById(R.id.lay_bg);
-        if(itensSelected.get(position) != null && itensSelected.get(position)){
-            layoutSelected.setVisibility(View.VISIBLE);
-        }else{
-            layoutSelected.setVisibility(View.INVISIBLE);
-        }
 
         return nameView;
     }

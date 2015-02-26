@@ -80,8 +80,7 @@
                         android:layout_toRightOf="@+id/prefechProgress"
                         android:paddingLeft="5dp"
                         android:layout_centerVertical="true"
-                        android:textStyle="bold" 
-                        android:text="najnsjnkdjknsd"/>
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
             </LinearLayout>

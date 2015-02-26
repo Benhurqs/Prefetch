@@ -21,11 +21,12 @@ import java.util.ArrayList;
 
 import br.com.benhurqs.prefetch.R;
 import br.com.benhurqs.prefetch.adapter.MapsAdapter;
+import br.com.benhurqs.prefetch.dialog.AlertUtil;
 import br.com.benhurqs.prefetch.directory.PathManager;
 import br.com.benhurqs.prefetch.preferences.MapsPreferences;
 import br.com.benhurqs.prefetch.util.files.FileManager;
 
-public class MyMapsActivity extends Activity implements ListView.MultiChoiceModeListener{
+public class MyMapsActivity extends Activity{
 
     private ListView myMapsList;
     private ArrayList<String[]> mapsListName;
@@ -50,15 +51,30 @@ public class MyMapsActivity extends Activity implements ListView.MultiChoiceMode
         populateList();
 
         myMapsAdapter = new MapsAdapter(this, mapsListName);
-        myMapsList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
-        myMapsList.setMultiChoiceModeListener(this);
+//        myMapsList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+//        myMapsList.setMultiChoiceModeListener(this);
         myMapsList.setAdapter(myMapsAdapter);
         myMapsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                MapsPreferences pref = new MapsPreferences(MyMapsActivity.this);
-                pref.saveMapName(PathManager.getMapName(position));
-                finish();
+//                MapsPreferences pref = new MapsPreferences(MyMapsActivity.this);
+//                pref.saveMapName(PathManager.getMapName(position));
+//                finish();
+                Log.e("cheguei item","aqui item");
+            }
+        });
+
+        myMapsList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertUtil.showDialogDeleteMap(MyMapsActivity.this, PathManager.getMapName(position), new AlertUtil.AlertListener() {
+                    @Override
+                    public void onClickOk(String value) {
+                        Log.e("cheguei","aqui long");
+                    }
+                });
+                return true;
             }
         });
     }
@@ -96,49 +112,6 @@ public class MyMapsActivity extends Activity implements ListView.MultiChoiceMode
 
     }
 
-    @Override
-    public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-        myMapsAdapter.setItemSelected(position, checked);
-
-        int selectCount = myMapsList.getCheckedItemCount();
-
-        switch (selectCount) {
-            case 1:
-                mode.setSubtitle("Um item selecionado");
-                break;
-            default:
-                mode.setSubtitle("" + selectCount + " itens selecionados");
-                break;
-        }
-    }
-
-    @Override
-    public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.list_select_menu, menu);
-        mode.setTitle("Selecione os itens que deseja deletar");
-        mode.setSubtitle("Um item selecionado");
-        return true;
-    }
-
-    @Override
-    public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-        return false;
-    }
-
-    @Override
-    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.delete:
-                deleteFolder();
-                mode.finish();
-                break;
-            default:
-                break;
-        }
-
-        return true;
-    }
 
     public void deleteFolder() {
         SparseBooleanArray checked = myMapsList.getCheckedItemPositions();
@@ -156,8 +129,4 @@ public class MyMapsActivity extends Activity implements ListView.MultiChoiceMode
         init();
     }
 
-    @Override
-    public void onDestroyActionMode(ActionMode mode) {
-        myMapsAdapter.clearSelected();
-    }
 }

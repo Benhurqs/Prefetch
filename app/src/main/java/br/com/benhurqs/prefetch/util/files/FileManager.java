@@ -55,7 +55,7 @@ public class FileManager {
         } else {
             hrSize = dec.format(size).concat(" KB");
         }
-        return hrSize;
+        return "(" + hrSize + ")";
     }
 
 }
