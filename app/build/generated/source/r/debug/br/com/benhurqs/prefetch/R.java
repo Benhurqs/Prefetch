@@ -1700,9 +1700,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int Gray=0x7f0b0075;
-        public static final int Hybrid_map=0x7f0b007b;
-        public static final int NatGeo_map=0x7f0b007c;
-        public static final int OSM_Map=0x7f0b007d;
+        public static final int NatGeo_map=0x7f0b007b;
         public static final int Ocean_Basemap=0x7f0b0076;
         public static final int Satellite_Map=0x7f0b007a;
         public static final int World_Street_Map=0x7f0b0073;
@@ -1721,7 +1719,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0b0042;
         public static final int action_mode_bar_stub=0x7f0b0041;
         public static final int action_mode_close_button=0x7f0b0034;
-        public static final int action_settings=0x7f0b007f;
+        public static final int action_settings=0x7f0b007d;
         public static final int activity_chooser_view_content=0x7f0b0035;
         public static final int adjust_height=0x7f0b0016;
         public static final int adjust_width=0x7f0b0017;
@@ -1746,14 +1744,14 @@ containing a value of this type.
         public static final int dialog=0x7f0b0020;
         public static final int disableHome=0x7f0b000c;
         public static final int donate_with_google=0x7f0b002e;
-        public static final int downlaod=0x7f0b0081;
+        public static final int downlaod=0x7f0b007f;
         public static final int dropdown=0x7f0b0021;
         public static final int edit_query=0x7f0b0047;
         public static final int edt_value=0x7f0b005d;
         public static final int end=0x7f0b0014;
         public static final int expand_activities_button=0x7f0b0036;
         public static final int expanded_menu=0x7f0b003c;
-        public static final int find=0x7f0b007e;
+        public static final int find=0x7f0b007c;
         public static final int grayscale=0x7f0b0030;
         public static final int holo_dark=0x7f0b0023;
         public static final int holo_light=0x7f0b0024;
@@ -1774,7 +1772,7 @@ containing a value of this type.
         public static final int match_parent=0x7f0b002a;
         public static final int middle=0x7f0b0015;
         public static final int monochrome=0x7f0b0031;
-        public static final int my_maps=0x7f0b0080;
+        public static final int my_maps=0x7f0b007e;
         public static final int never=0x7f0b001e;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;
@@ -2003,17 +2001,22 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
         public static final int settings_map=0x7f0d0068;
         public static final int store_picture_message=0x7f0d0069;
         public static final int store_picture_title=0x7f0d006a;
-        public static final int tile_path=0x7f0d006b;
-        public static final int tile_url=0x7f0d006c;
-        public static final int title_activity_gmaps=0x7f0d006d;
-        public static final int title_activity_google_maps=0x7f0d006e;
-        public static final int title_activity_maps=0x7f0d006f;
-        public static final int title_activity_my_maps=0x7f0d0070;
-        public static final int top_left_x=0x7f0d0071;
-        public static final int top_left_y=0x7f0d0072;
-        public static final int txt_no=0x7f0d0073;
-        public static final int txt_yes=0x7f0d0074;
-        public static final int wallet_buy_button_place_holder=0x7f0d0075;
+        public static final int tile_natgeo_url=0x7f0d006b;
+        public static final int tile_ocean_url=0x7f0d006c;
+        public static final int tile_path=0x7f0d006d;
+        public static final int tile_sattelite_url=0x7f0d006e;
+        public static final int tile_street_url=0x7f0d006f;
+        public static final int tile_topo_url=0x7f0d0070;
+        public static final int tile_url=0x7f0d0071;
+        public static final int title_activity_gmaps=0x7f0d0072;
+        public static final int title_activity_google_maps=0x7f0d0073;
+        public static final int title_activity_maps=0x7f0d0074;
+        public static final int title_activity_my_maps=0x7f0d0075;
+        public static final int top_left_x=0x7f0d0076;
+        public static final int top_left_y=0x7f0d0077;
+        public static final int txt_no=0x7f0d0078;
+        public static final int txt_yes=0x7f0d0079;
+        public static final int wallet_buy_button_place_holder=0x7f0d007a;
     }
     public static final class style {
         public static final int Base_TextAppearance_AppCompat=0x7f0e0000;

@@ -26,6 +26,11 @@ public class MapsPreferences {
 		editortop.putString(context.getString(R.string.map_pref), String.valueOf(mapType));
 		editortop.commit();
 	}
+
+    public Integer getMapUrl(){
+        String mapType = preferences.getString(context.getString(R.string.map_pref), String.valueOf(MapTypeUtil.SATELLITE));
+        return MapTypeUtil.getMapUrl(Integer.valueOf(mapType));
+    }
 	
 	public MapOptions getMapType(){
 		String mapType = preferences.getString(context.getString(R.string.map_pref), String.valueOf(MapTypeUtil.SATELLITE));
@@ -36,7 +41,6 @@ public class MapsPreferences {
         if(mapName == null || mapName.equalsIgnoreCase("")){
             return;
         }
-        Log.e("salvei  ", mapName);
         SharedPreferences.Editor editorName = preferences.edit();
         editorName.putString(context.getString(R.string.map_name), String.valueOf(mapName));
         editorName.commit();
@@ -45,6 +49,10 @@ public class MapsPreferences {
     public String getMyMapName(){
         String mapName = preferences.getString(context.getString(R.string.map_name), null);
         return mapName;
+    }
+
+    public void saveMapUrl(int mapType){
+
     }
 
 }

@@ -51,27 +51,24 @@ public class MyMapsActivity extends Activity{
         populateList();
 
         myMapsAdapter = new MapsAdapter(this, mapsListName);
-//        myMapsList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
-//        myMapsList.setMultiChoiceModeListener(this);
         myMapsList.setAdapter(myMapsAdapter);
         myMapsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                MapsPreferences pref = new MapsPreferences(MyMapsActivity.this);
-//                pref.saveMapName(PathManager.getMapName(position));
-//                finish();
-                Log.e("cheguei item","aqui item");
+                MapsPreferences pref = new MapsPreferences(MyMapsActivity.this);
+                pref.saveMapName(PathManager.getMapName(position));
+                finish();
             }
         });
 
         myMapsList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
 
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
                 AlertUtil.showDialogDeleteMap(MyMapsActivity.this, PathManager.getMapName(position), new AlertUtil.AlertListener() {
                     @Override
                     public void onClickOk(String value) {
-                        Log.e("cheguei","aqui long");
+                        deleteFolder(position);
                     }
                 });
                 return true;
@@ -113,19 +110,8 @@ public class MyMapsActivity extends Activity{
     }
 
 
-    public void deleteFolder() {
-        SparseBooleanArray checked = myMapsList.getCheckedItemPositions();
-        int size = checked.size();
-        for (int i = size-1; i >= 0; i--) {
-            Log.e("tamanho", i + "");
-            int key = checked.keyAt(i);
-            boolean value = checked.get(key);
-            if (value){
-                PathManager.deleteFolder(PathManager.getMapName(key));
-                Log.e("tamanho",PathManager.getMapName(key));
-            }
-        }
-
+    public void deleteFolder(int position) {
+        PathManager.deleteFolder(PathManager.getMapName(position));
         init();
     }
 

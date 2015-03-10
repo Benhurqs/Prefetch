@@ -61,6 +61,7 @@ public class TileFileHandler {
 
 	        File mediaFile;
 	        mediaFile = new File(mediaStorageDir.getPath() + File.separator + mImageName);
+            Log.e("path", "path==>  " + mediaFile.getAbsolutePath());
 	        return mediaFile;
 	    }
 

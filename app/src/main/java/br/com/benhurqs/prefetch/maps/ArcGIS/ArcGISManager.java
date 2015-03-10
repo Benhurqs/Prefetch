@@ -3,6 +3,7 @@ package br.com.benhurqs.prefetch.maps.ArcGIS;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.esri.android.map.LocationService;
 import com.esri.android.map.MapView;
 import com.esri.android.map.event.OnStatusChangedListener;
 import com.esri.core.geometry.GeometryEngine;
+import com.esri.core.geometry.GeometryException;
 import com.esri.core.geometry.Point;
 import com.esri.core.geometry.SpatialReference;
 import com.esri.core.map.Graphic;
@@ -69,7 +71,7 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
 
         mLocationLayer = new GraphicsLayer();
         mMapView.addLayer(mLocationLayer);
-        mMapView.enableWrapAround(true);
+//        mMapView.enableWrapAround(true);
 
         mMapView.setOnStatusChangedListener(new OnStatusChangedListener() {
 
@@ -116,24 +118,24 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
             case R.id.World_Topo:
                 updateMapType(MapTypeUtil.TOPO);
                 return true;
-            case R.id.Gray:
-                updateMapType(MapTypeUtil.GRAY);
-                return true;
+//            case R.id.Gray:
+//                updateMapType(MapTypeUtil.GRAY);
+//                return true;
             case R.id.Ocean_Basemap:
                 updateMapType(MapTypeUtil.OCEANS);
                 return true;
             case R.id.Satellite_Map:
                 updateMapType(MapTypeUtil.SATELLITE);
                 return true;
-            case R.id.Hybrid_map:
-                updateMapType(MapTypeUtil.HYBRID);
-                return true;
+//            case R.id.Hybrid_map:
+//                updateMapType(MapTypeUtil.HYBRID);
+//                return true;
             case R.id.NatGeo_map:
                 updateMapType(MapTypeUtil.NATIONAL_GEOGRAPHIC);
                 return true;
-            case R.id.OSM_Map:
-                updateMapType(MapTypeUtil.OSM);
-                return true;
+//            case R.id.OSM_Map:
+//                updateMapType(MapTypeUtil.OSM);
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -207,18 +209,6 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
     }
 
     public void startPreftch(String name) {
-
-//        addMarker(mMapView.toMapPoint(pointsPreferences.getTopLeftX(), pointsPreferences.getTopLeftY()));
-//        addMarker(mMapView.toMapPoint(pointsPreferences.getBottomRightX(), pointsPreferences.getBottomRightY()));
-
-//        addMarker(dimensions.getTopLeft());
-//        addMarker(dimensions.getBottomRight());
-//
-//        Point topLeft = mMapView.toMapPoint(255, 255);
-//        Point bottomRight = mMapView.toMapPoint(1695, 781);
-
-
-
         Point topLeft = mMapView.toMapPoint(pointsPreferences.getTopLeftX(), pointsPreferences.getTopLeftY());
         Point bottomRight = mMapView.toMapPoint(pointsPreferences.getBottomRightX(), pointsPreferences.getBottomRightY());
         Point center =  mMapView.toMapPoint(
@@ -230,22 +220,27 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
         Point latlngBottom = (Point) GeometryEngine.project(bottomRight, mMapView.getSpatialReference(), sp);
         Point latlngCenter = (Point) GeometryEngine.project(center, mMapView.getSpatialReference(), sp);
 
-        MapsDataObj obj = new MapsDataObj();
-        obj.setName(name.toString().trim());
-        obj.setLat(latlngCenter.getX());
-        obj.setLng(latlngCenter.getY());
-        obj.setMaxZoom(5);
 
-        ArcgisPrefechProgress prefechProgress = new ArcgisPrefechProgress(name);
+        try {
+            MapsDataObj obj = new MapsDataObj();
+            obj.setName(name.toString().trim());
+            obj.setLat(latlngCenter.getX());
+            obj.setLng(latlngCenter.getY());
+            obj.setMaxZoom(5);
 
-        Bundle prefechArguments = new Bundle();
-        if (latlngTop != null && latlngBottom != null) {
-            prefechArguments.putDouble(KEY_LATLNG_TOP_X, latlngTop.getX());
-            prefechArguments.putDouble(KEY_LATLNG_TOP_Y, latlngTop.getY());
-            prefechArguments.putDouble(KEY_LATLNG_BOTTOM_X, latlngBottom.getX());
-            prefechArguments.putDouble(KEY_LATLNG_BOTTOM_Y, latlngBottom.getY());
-            prefechProgress.setArguments(prefechArguments);
-            prefechProgress.show(this.getFragmentManager(), "");
+            ArcgisPrefechProgress prefechProgress = new ArcgisPrefechProgress(name);
+
+            Bundle prefechArguments = new Bundle();
+            if (latlngTop != null && latlngBottom != null) {
+                prefechArguments.putDouble(KEY_LATLNG_TOP_X, latlngTop.getX());
+                prefechArguments.putDouble(KEY_LATLNG_TOP_Y, latlngTop.getY());
+                prefechArguments.putDouble(KEY_LATLNG_BOTTOM_X, latlngBottom.getX());
+                prefechArguments.putDouble(KEY_LATLNG_BOTTOM_Y, latlngBottom.getY());
+                prefechProgress.setArguments(prefechArguments);
+                prefechProgress.show(this.getFragmentManager(), "");
+            }
+        }catch (GeometryException ex){
+            Toast.makeText(getApplicationContext(), "Error ao pegar a localizacao", Toast.LENGTH_SHORT).show();
         }
 
 

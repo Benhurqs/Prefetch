@@ -4,4 +4,11 @@
     <string name="host_name">http://services.arcgisonline.com/ArcGIS/rest/services</string>
     <string name="tile_url">"%1$s/World_Imagery/MapServer/tile/%2$s/%3$s/%4$s"</string>
 
+    <string name="tile_natgeo_url">"%1$s/NatGeo_World_Map/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <string name="tile_topo_url">"%1$s/World_Topo_Map/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <string name="tile_ocean_url">"%1$s/Ocean_Basemap/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <string name="tile_sattelite_url">"%1$s/World_Imagery/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <string name="tile_street_url">"%1$s/ESRI_StreetMap_World_2D/MapServer/tile/%2$s/%3$s/%4$s"</string>
+
+
 </resources>

@@ -1,12 +1,15 @@
 package br.com.benhurqs.prefetch.util;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.esri.android.map.MapOptions;
 import com.esri.android.map.MapOptions.MapType;
 
+import br.com.benhurqs.prefetch.R;
+
 public class MapTypeUtil {
-	
+
 	public static int TOPO = 0;
 	public static int STREETS = 1;
 	public static int GRAY = 2;
@@ -58,11 +61,29 @@ public class MapTypeUtil {
 			add("World_Street_Map");
 		}
 	};
+
+    public static ArrayList<Integer> mapUrl = new ArrayList<Integer>(){
+        private static final long serialVersionUID = 1L;
+        {
+            add(R.string.tile_topo_url);
+            add( R.string.tile_street_url);
+            add(null);
+            add( R.string.tile_ocean_url);
+            add( R.string.tile_sattelite_url);
+            add(null);
+            add( R.string.tile_natgeo_url);
+            add(null);
+        }
+    };
 	
 	
 	public static String getMapName(int position){
 		return mapName.get(position);
 	}
+
+    public static Integer getMapUrl(int position){
+        return mapUrl.get(position);
+    }
 	
 	/*
 	  "services": [

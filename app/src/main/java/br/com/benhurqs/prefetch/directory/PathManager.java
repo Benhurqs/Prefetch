@@ -57,20 +57,36 @@ public class PathManager {
         init();
 
         File deletDirectory = new File(getPrefetchPath()
-                + File.pathSeparator + folder);
+                + File.separator + folder);
 
-        if (deletDirectory.exists()) {
-            File[] dirFiles = deletDirectory.listFiles();
-            if (dirFiles.length != 0) {
-                for (int ii = 0; ii <= dirFiles.length; ii++) {
-                    if(!dirFiles[ii].delete()){
-                        return false;
-                    }
+        return deleteDirectory(deletDirectory);
+
+//        if (deletDirectory.exists()) {
+//            File[] dirFiles = deletDirectory.listFiles();
+//            if (dirFiles.length != 0) {
+//                for (int ii = 0; ii <= dirFiles.length; ii++) {
+//                    if(!dirFiles[ii].delete()){
+//                        return false;
+//                    }
+//                }
+//            }
+//        }
+//
+//        return true;
+    }
+
+    public static boolean deleteDirectory(File path) {
+        if( path.exists() && path.isDirectory()) {
+            File[] files = path.listFiles();
+            for(int i=0; i<files.length; i++) {
+                if(files[i].isDirectory()) {
+                    deleteDirectory(files[i]);
+                }else {
+                    files[i].delete();
                 }
             }
         }
-
-        return true;
+        return(path.delete());
     }
 
     public static File getFile(String folder){

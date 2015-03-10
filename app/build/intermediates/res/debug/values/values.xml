@@ -365,11 +365,18 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
+    <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/urls.xml -->
+    <eat-comment/>
+    <string name="tile_natgeo_url">"%1$s/NatGeo_World_Map/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <string name="tile_ocean_url">"%1$s/Ocean_Basemap/MapServer/tile/%2$s/%3$s/%4$s"</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="tile_path">/storage/sdcard1/Raven/Maps/%1$s/%2$s</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/urls.xml -->
     <eat-comment/>
+    <string name="tile_sattelite_url">"%1$s/World_Imagery/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <string name="tile_street_url">"%1$s/ESRI_StreetMap_World_2D/MapServer/tile/%2$s/%3$s/%4$s"</string>
+    <string name="tile_topo_url">"%1$s/World_Topo_Map/MapServer/tile/%2$s/%3$s/%4$s"</string>
     <string name="tile_url">"%1$s/World_Imagery/MapServer/tile/%2$s/%3$s/%4$s"</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/strings.xml -->
     <eat-comment/>

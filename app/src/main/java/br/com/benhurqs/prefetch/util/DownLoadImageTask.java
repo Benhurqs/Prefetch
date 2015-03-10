@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 import br.com.benhurqs.prefetch.R;
+import br.com.benhurqs.prefetch.preferences.MapsPreferences;
 
 public class DownLoadImageTask  {
 
@@ -79,7 +80,9 @@ public class DownLoadImageTask  {
 
 
 	public static boolean fechTile( String pathName, final int zoom , final long y , final long x , final Context ctx ) {
-		String tileUrl = ctx.getString( R.string.tile_url,  ctx.getString(R.string.host_name),zoom,y,x ) ;
+//		String tileUrl = ctx.getString( R.string.tile_url,  ctx.getString(R.string.host_name),zoom,y,x ) ;
+        MapsPreferences pref = new MapsPreferences(ctx);
+        String tileUrl = ctx.getString( pref.getMapUrl(),  ctx.getString(R.string.host_name),zoom,y,x ) ;
 
 		try {
 
