@@ -13,6 +13,7 @@
 
 package br.com.benhurqs.prefetch.activity;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,6 +33,9 @@ public class ArcGISActivity extends ArcGISManager implements OnClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+
+        ActionBar bar = getActionBar();
+        bar.setDisplayHomeAsUpEnabled(true);
 
 		init();
 
@@ -64,20 +68,31 @@ public class ArcGISActivity extends ArcGISManager implements OnClickListener {
 		super.onOptionsItemSelected(item);
 
 		switch (item.getItemId()) {
-
+            case android.R.id.home:
+                ArcGISActivity.this.finish();
+                overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
+                return true;
 		default:
 			return true;
 		}
 	}
-
-
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 	}
 
-	@Override
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
 	protected void onResume() {
 		super.onResume();
 	}

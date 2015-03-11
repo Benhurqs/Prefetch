@@ -58,6 +58,7 @@ public class MyMapsActivity extends Activity{
                 MapsPreferences pref = new MapsPreferences(MyMapsActivity.this);
                 pref.saveMapName(PathManager.getMapName(position));
                 finish();
+                overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
             }
         });
 
@@ -102,6 +103,7 @@ public class MyMapsActivity extends Activity{
         switch (item.getItemId()){
             case android.R.id.home:
                 finish();
+                overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

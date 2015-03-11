@@ -15,9 +15,21 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040003;
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
+        public static final int in_from_bottom=0x7f040006;
+        public static final int in_from_left=0x7f040007;
+        public static final int in_from_right=0x7f040008;
+        public static final int in_from_top=0x7f040009;
+        public static final int out_from_bottom=0x7f04000a;
+        public static final int out_from_left=0x7f04000b;
+        public static final int out_from_right=0x7f04000c;
+        public static final int out_from_top=0x7f04000d;
     }
     public static final class array {
+        /** <item>OSM</item>
+         */
         public static final int map_types=0x7f070000;
+        /** <item>7</item>
+         */
         public static final int map_types_values=0x7f070001;
     }
     public static final class attr {

@@ -84,16 +84,17 @@ public class GMapsActivity extends FragmentActivity {
             case R.id.settings:
                 Intent intent = new Intent(this,SettingsActivity.class);
                 startActivity(intent);
-//                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                overridePendingTransition(R.anim.in_from_top, R.anim.out_from_bottom);
                 return true;
             case R.id.downlaod:
                 Intent arcgis = new Intent(this,ArcGISActivity.class);
-                arcgis.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(arcgis);
+                overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
                 return true;
             case R.id.my_maps:
                 Intent myMaps = new Intent(this,MyMapsActivity.class);
                 startActivity(myMaps);
+                overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

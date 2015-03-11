@@ -111,6 +111,7 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
             case R.id.settings:
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.in_from_top, R.anim.out_from_bottom);
                 return true;
             case R.id.World_Street_Map:
                 updateMapType(MapTypeUtil.STREETS);

@@ -5,22 +5,22 @@
     <string-array name="map_types">
         <item>Topo</item>
         <item>Streets</item>
-        <item>Gray</item>
+        <!--<item>Gray</item>-->
         <item>Oceans</item>
         <item>Satellite</item>
-        <item>Hybrid</item>
+        <!--<item>Hybrid</item>-->
         <item>Nat. Geographic</item>
-        <item>OSM</item>
+        <!--<item>OSM</item>-->
     </string-array>
     <string-array name="map_types_values">
         <item>0</item>
         <item>1</item>
-        <item>2</item>
+        <!--<item>2</item>-->
         <item>3</item>
         <item>4</item>
-        <item>5</item>
+        <!--<item>5</item>-->
         <item>6</item>
-        <item>7</item>
+        <!--<item>7</item>-->
     </string-array>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>

@@ -27,6 +27,7 @@ public class SettingsActivity extends PreferenceActivity {
 		switch (item.getItemId()) {
 			case android.R.id.home:
 				SettingsActivity.this.finish();
+                overridePendingTransition(R.anim.in_from_bottom, R.anim.out_from_top);
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);

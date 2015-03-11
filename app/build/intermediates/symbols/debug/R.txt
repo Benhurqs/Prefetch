@@ -4,6 +4,14 @@ int anim abc_slide_in_bottom 0x7f040002
 int anim abc_slide_in_top 0x7f040003
 int anim abc_slide_out_bottom 0x7f040004
 int anim abc_slide_out_top 0x7f040005
+int anim in_from_bottom 0x7f040006
+int anim in_from_left 0x7f040007
+int anim in_from_right 0x7f040008
+int anim in_from_top 0x7f040009
+int anim out_from_bottom 0x7f04000a
+int anim out_from_left 0x7f04000b
+int anim out_from_right 0x7f04000c
+int anim out_from_top 0x7f04000d
 int array map_types 0x7f070000
 int array map_types_values 0x7f070001
 int attr actionBarDivider 0x7f010070
