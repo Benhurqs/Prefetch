@@ -21,6 +21,13 @@
             android:entryValues="@array/map_types_values"
             android:key="@string/map_pref"
             android:title="@string/maps" />
+
+        <ListPreference
+            android:entries="@array/map_zoom_values"
+            android:entryValues="@array/map_zoom_values"
+            android:key="@string/map_zoom_pref"
+            android:title="@string/zoom"
+            android:summary="@string/zoom_summary"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

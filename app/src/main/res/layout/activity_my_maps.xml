@@ -6,6 +6,8 @@
     android:background="@android:color/white"
     android:keepScreenOn="true">
 
+
+
     <RelativeLayout
         android:id="@+id/title_rect"
         android:layout_width="match_parent"
@@ -27,6 +29,8 @@
 
     </RelativeLayout>
 
+
+
     <ListView
         android:id="@+id/lv_my_maps"
         android:layout_width="fill_parent"
@@ -36,6 +40,17 @@
         android:divider="#DCDCDC"
         android:dividerHeight="2dp">
     </ListView>
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_rect"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"/>
+
+
 
 
 

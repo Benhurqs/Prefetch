@@ -23,6 +23,7 @@ import br.com.benhurqs.prefetch.R;
 import br.com.benhurqs.prefetch.directory.PathManager;
 import br.com.benhurqs.prefetch.maps.ArcGIS.ArcGISManager;
 import br.com.benhurqs.prefetch.model.TilePoint;
+import br.com.benhurqs.prefetch.preferences.MapsPreferences;
 import br.com.benhurqs.prefetch.tiles.TileFinder;
 import br.com.benhurqs.prefetch.tiles.TilesUtils;
 import br.com.benhurqs.prefetch.util.DownLoadImageTask;
@@ -36,7 +37,7 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 	private static double KEY_LATLNG_TOP_Y;
 	private static double KEY_LATLNG_BOTTOM_X;
 	private static double KEY_LATLNG_BOTTOM_Y;
-	private static final int MAX_ZOOM = 5;
+	private static final int MAX_ZOOM = 14;
 	private static final int MIN_ZOOM = 0;
 	private static int START_ZOOM = 0;
 	
@@ -54,7 +55,10 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 
     private static String path;
 
-    public ArcgisPrefechProgress(String name){
+    private MapsPreferences pref;
+
+    public ArcgisPrefechProgress(Context ctx, String name){
+        pref = new MapsPreferences(ctx);
         path = name;
     }
 	
@@ -199,7 +203,8 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 				
 			}
 			
-			for (int i = START_ZOOM; i <= MAX_ZOOM; i++) 
+//			for (int i = START_ZOOM; i <= MAX_ZOOM; i++)
+            for (int i = START_ZOOM; i <= pref.getMaxZoom(); i++)
 			{
 				currentZoom = i;
 				

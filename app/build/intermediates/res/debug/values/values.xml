@@ -22,6 +22,21 @@
         <item>6</item>
         <!--<item>7</item>-->
     </string-array>
+    <string-array name="map_zoom_values">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+    </string-array>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -329,6 +344,7 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
     <string name="map_name">map_name</string>
     <string name="map_pref">map_preferences</string>
     <string name="map_type">map_type</string>
+    <string name="map_zoom_pref">map_zoom_preferences</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="maps">Mapa</string>
@@ -395,6 +411,10 @@ https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
+    <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="zoom">Zoom</string>
+    <string name="zoom_summary">Máximo de zoom para o download.</string>
     <!-- From: file:/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">

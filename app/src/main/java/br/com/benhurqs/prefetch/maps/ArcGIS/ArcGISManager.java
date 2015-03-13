@@ -229,7 +229,7 @@ public class ArcGISManager extends SuperUI implements LocatorListener {
             obj.setLng(latlngCenter.getY());
             obj.setMaxZoom(5);
 
-            ArcgisPrefechProgress prefechProgress = new ArcgisPrefechProgress(name);
+            ArcgisPrefechProgress prefechProgress = new ArcgisPrefechProgress(getApplicationContext(),name);
 
             Bundle prefechArguments = new Bundle();
             if (latlngTop != null && latlngBottom != null) {

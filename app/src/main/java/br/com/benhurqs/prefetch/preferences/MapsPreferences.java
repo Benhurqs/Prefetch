@@ -51,8 +51,9 @@ public class MapsPreferences {
         return mapName;
     }
 
-    public void saveMapUrl(int mapType){
-
+    public int getMaxZoom(){
+        String mapZoom = preferences.getString(context.getString(R.string.map_zoom_pref), "14");
+        return Integer.valueOf(mapZoom);
     }
 
 }

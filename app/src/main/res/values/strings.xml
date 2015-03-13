@@ -21,6 +21,8 @@
     <string name="find">Procurar</string>
     <string name="maps">Mapa</string>
 
+
+
     <!-- menu offline items -->
     <string name="download">Download</string>
     <string name="my_maps">Meus mapas</string>
@@ -29,6 +31,8 @@
     <string name="settings_map">Configuração do mapa</string>
     <string name="off_map">Mapa Offline</string>
     <string name="off_map_summary">Usar mapa offline quando não estiver conectado.</string>
+    <string name="zoom">Zoom</string>
+    <string name="zoom_summary">Máximo de zoom para o download.</string>
 
     <!-- arcgiz license -->
     <string name="license_succeeded">Licença autorizada.</string>

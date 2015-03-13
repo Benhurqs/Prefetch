@@ -10,6 +10,7 @@
 
     <!-- Maps preferences -->
     <string name="map_pref">map_preferences</string>
+    <string name="map_zoom_pref">map_zoom_preferences</string>
     <string name="map_type">map_type</string>
     <string name="map_name">map_name</string>
     
@@ -40,6 +41,23 @@
         <!--<item>5</item>-->
         <item>6</item>
         <!--<item>7</item>-->
+    </string-array>
+
+    <!-- map zoom values -->
+    <string-array name="map_zoom_values">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
     </string-array>
 
 </resources>

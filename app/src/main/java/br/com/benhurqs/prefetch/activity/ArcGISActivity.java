@@ -77,20 +77,6 @@ public class ArcGISActivity extends ArcGISManager implements OnClickListener {
 		}
 	}
 
-	@Override
-	protected void onPause() {
-		super.onPause();
-	}
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
 
     @Override
 	protected void onResume() {
