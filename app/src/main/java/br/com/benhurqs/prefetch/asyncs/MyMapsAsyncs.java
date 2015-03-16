@@ -1,4 +1,4 @@
-package br.com.benhurqs.prefetch.helpers;
+package br.com.benhurqs.prefetch.asyncs;
 
 import android.app.Activity;
 import android.os.AsyncTask;

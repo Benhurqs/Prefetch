@@ -1,9 +1,7 @@
 package br.com.benhurqs.prefetch.activity;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,7 +14,7 @@ import br.com.benhurqs.prefetch.R;
 import br.com.benhurqs.prefetch.adapter.MapsAdapter;
 import br.com.benhurqs.prefetch.dialog.AlertUtil;
 import br.com.benhurqs.prefetch.directory.PathManager;
-import br.com.benhurqs.prefetch.helpers.MyMapsAsyncs;
+import br.com.benhurqs.prefetch.asyncs.MyMapsAsyncs;
 import br.com.benhurqs.prefetch.preferences.MapsPreferences;
 
 public class MyMapsActivity extends MyMapsAsyncs {
@@ -68,14 +66,10 @@ public class MyMapsActivity extends MyMapsAsyncs {
                 return true;
             }
         });
+
     }
 
     public void populateList(){
-//        for(File mapFile : PathManager.getPrefetchFile().listFiles()){
-//            String[] mapName = new String[]{mapFile.getName(), FileManager.getSize(mapFile)};
-//            mapsListName.add(mapName);
-//        }
-
         new GetFolders().execute();
 
     }
@@ -96,8 +90,6 @@ public class MyMapsActivity extends MyMapsAsyncs {
 
 
     public void deleteFolder(int position) {
-//        PathManager.deleteFolder(PathManager.getMapName(position));
-//        init();
         new DeleteFolders().execute(position);
     }
 

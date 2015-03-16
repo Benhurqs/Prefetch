@@ -1,4 +1,4 @@
-package br.com.benhurqs.prefetch.maps.ArcGIS.progress;
+package br.com.benhurqs.prefetch.dialog;
 
 import br.com.benhurqs.prefetch.R;
 import android.app.AlertDialog;

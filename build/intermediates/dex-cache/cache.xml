@@ -9,13 +9,6 @@
         <dex dex="/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/jcifs-1.3.17-0cf868693809c227b76362fbb30230cc09ddec12.jar" />
     </item>
     <item
-        jar="/home/bernardo/benhur/GIT/Prefetch/core/build/libs/core.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2745a903d668e70ff91ce8a14badf6aaeaa6aaee">
-        <dex dex="/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/core-827666329e1a380eefd801fdd748533f9e60b0d6.jar" />
-    </item>
-    <item
         jar="/home/bernardo/benhur/GIT/Prefetch/app/libs/arcgis-android-api.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -56,6 +49,13 @@
         revision="21.1.2"
         sha1="ffbb48e87fa5e9107c17aaa0616f724d785a4d71">
         <dex dex="/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/jackson-mapper-lgpl-1.9.5-5c01155bc9b239d7e2d5c47e3e4cd18ed8a0dcd5.jar" />
+    </item>
+    <item
+        jar="/home/bernardo/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.5/77bf7cacf9cefe19dc105e5425d2eb1bb5285881/android-async-http-1.4.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77bf7cacf9cefe19dc105e5425d2eb1bb5285881">
+        <dex dex="/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.5-0ae7db33ead381890956b36f348e917587bdbe9d.jar" />
     </item>
     <item
         jar="/home/bernardo/benhur/GIT/Prefetch/app/libs/jackson-core-lgpl-1.9.5.jar"

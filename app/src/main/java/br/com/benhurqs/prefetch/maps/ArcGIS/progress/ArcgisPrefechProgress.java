@@ -26,6 +26,7 @@ import br.com.benhurqs.prefetch.model.TilePoint;
 import br.com.benhurqs.prefetch.preferences.MapsPreferences;
 import br.com.benhurqs.prefetch.tiles.TileFinder;
 import br.com.benhurqs.prefetch.tiles.TilesUtils;
+import br.com.benhurqs.prefetch.util.Constants;
 import br.com.benhurqs.prefetch.util.DownLoadImageTask;
 import br.com.benhurqs.prefetch.util.NetworkUtil;
 
@@ -76,10 +77,10 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 		getDialog().setCanceledOnTouchOutside(false);
 		setCancelable(false);
 		
-		KEY_LATLNG_TOP_X = getArguments().getDouble(ArcGISManager.KEY_LATLNG_TOP_X);
-		KEY_LATLNG_TOP_Y = getArguments().getDouble(ArcGISManager.KEY_LATLNG_TOP_Y);
-		KEY_LATLNG_BOTTOM_X = getArguments().getDouble(ArcGISManager.KEY_LATLNG_BOTTOM_X);
-		KEY_LATLNG_BOTTOM_Y = getArguments().getDouble(ArcGISManager.KEY_LATLNG_BOTTOM_Y);
+		KEY_LATLNG_TOP_X = getArguments().getDouble(Constants.KEY_LATLNG_TOP_X);
+		KEY_LATLNG_TOP_Y = getArguments().getDouble(Constants.KEY_LATLNG_TOP_Y);
+		KEY_LATLNG_BOTTOM_X = getArguments().getDouble(Constants.KEY_LATLNG_BOTTOM_X);
+		KEY_LATLNG_BOTTOM_Y = getArguments().getDouble(Constants.KEY_LATLNG_BOTTOM_Y);
 		
 		rootView.getContext().registerReceiver( updateDialogStatus, new IntentFilter(UPDATE_PROGRESS_DIALOG));
 		
@@ -280,16 +281,14 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 	    };
 	    
 	    
-	 private boolean fileExist(  int zoom ,  long y ,  long x )
-	 {
-		 
-//		 String tileUrl = getString(R.string.tile_path,zoom,y) +"/"+ x +".jpg";
+	 private boolean fileExist(  int zoom ,  long y ,  long x ){
          String tileUrl = PathManager.getFile(path) + "/" + zoom + "/" + y + "/" + x +".jpg";
          File tile = new File(tileUrl);
-		 if( tile.exists() )
-			 return true;
-		 else
-			 return false;
+		 if(tile.exists()) {
+             return true;
+         }else{
+             return false;
+         }
 		 
 	 }
 	 

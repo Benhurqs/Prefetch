@@ -1,7 +1,7 @@
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/classes/debug
-/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/core-827666329e1a380eefd801fdd748533f9e60b0d6.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-fd564f72e1e730f4b9accbca63a949e9d6f03a9a.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/arcgis-android-app-toolkit-d23e864873cedf131a7f2387ef2a708d59d4cca7.jar
+/home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.5-0ae7db33ead381890956b36f348e917587bdbe9d.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-77872fd23edc497f08511ec9852e6e44812bbc3e.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/jackson-core-lgpl-1.9.5-af335f839a2a437d34790008430b01b35835024b.jar
 /home/bernardo/benhur/GIT/Prefetch/app/build/intermediates/pre-dexed/debug/jcifs-1.3.17-0cf868693809c227b76362fbb30230cc09ddec12.jar
