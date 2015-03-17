@@ -12,6 +12,7 @@ import com.esri.core.geometry.SpatialReference;
 
 import br.com.benhurqs.prefetch.R;
 import br.com.benhurqs.prefetch.dialog.AlertUtil;
+import br.com.benhurqs.prefetch.dialog.ProgressDialog;
 import br.com.benhurqs.prefetch.json.obj.MapsDataObj;
 import br.com.benhurqs.prefetch.listeners.DownloadTileEvent;
 import br.com.benhurqs.prefetch.maps.ArcGIS.progress.ArcgisPrefechProgress;
@@ -39,7 +40,7 @@ public class DownloadManager extends  SuperUI {
         }
     }
 
-    public void startPreftch(String name) {
+    public void startPreftch(String path) {
         Point topLeft = mMapView.toMapPoint(pointsPreferences.getTopLeftX(), pointsPreferences.getTopLeftY());
         Point bottomRight = mMapView.toMapPoint(pointsPreferences.getBottomRightX(), pointsPreferences.getBottomRightY());
         Point center =  mMapView.toMapPoint(
@@ -54,22 +55,15 @@ public class DownloadManager extends  SuperUI {
 
         try {
             MapsDataObj obj = new MapsDataObj();
-            obj.setName(name.toString().trim());
+            obj.setName(path.toString().trim());
             obj.setLat(latlngCenter.getX());
             obj.setLng(latlngCenter.getY());
+            obj.setLatlngTop(latlngTop);
+            obj.setLatlngBottom(latlngBottom);
             obj.setMaxZoom(5);
 
-            ArcgisPrefechProgress prefechProgress = new ArcgisPrefechProgress(getApplicationContext(),name);
-
-            Bundle prefechArguments = new Bundle();
-            if (latlngTop != null && latlngBottom != null) {
-                prefechArguments.putDouble(Constants.KEY_LATLNG_TOP_X, latlngTop.getX());
-                prefechArguments.putDouble(Constants.KEY_LATLNG_TOP_Y, latlngTop.getY());
-                prefechArguments.putDouble(Constants.KEY_LATLNG_BOTTOM_X, latlngBottom.getX());
-                prefechArguments.putDouble(Constants.KEY_LATLNG_BOTTOM_Y, latlngBottom.getY());
-                prefechProgress.setArguments(prefechArguments);
-                prefechProgress.show(this.getFragmentManager(), "");
-            }
+            ProgressDialog progressTile = new ProgressDialog(DownloadManager.this, path, obj);
+            progressTile.startDownload();
         }catch (GeometryException ex){
             Toast.makeText(getApplicationContext(), "Error ao pegar a localizacao", Toast.LENGTH_SHORT).show();
         }
@@ -92,10 +86,11 @@ public class DownloadManager extends  SuperUI {
                 });
     }
 
+
     @Override
-    public void onTileEvent(DownloadTileEvent.DownloadTileType event) {
-        super.onTileEvent(event);
-        switch (event){
+    public void onTileEvent(DownloadTileEvent.DownloadTileType event, int currentZoom, int currentMaxProgress, int currentProgress) {
+        super.onTileEvent(event,currentZoom,currentMaxProgress,currentProgress);
+        switch (event) {
             case START:
                 break;
             case FINISH:
@@ -110,4 +105,6 @@ public class DownloadManager extends  SuperUI {
                 break;
         }
     }
+
+
 }

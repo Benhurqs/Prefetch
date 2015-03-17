@@ -12,6 +12,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import br.com.benhurqs.prefetch.R;
 import br.com.benhurqs.prefetch.preferences.MapsPreferences;
+import br.com.benhurqs.prefetch.rest.Core;
 
 public class DownLoadImageTask  {
 
@@ -83,6 +84,9 @@ public class DownLoadImageTask  {
 //		String tileUrl = ctx.getString( R.string.tile_url,  ctx.getString(R.string.host_name),zoom,y,x ) ;
         MapsPreferences pref = new MapsPreferences(ctx);
         String tileUrl = ctx.getString( pref.getMapUrl(),  ctx.getString(R.string.host_name),zoom,y,x ) ;
+
+        Core rest = new Core(ctx, Core.RequestType.GET, pathName, zoom, y, x);
+        rest.enviar();
 
 		try {
 

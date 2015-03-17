@@ -27,7 +27,8 @@ public class SuperUI extends Activity implements DownloadTileEvent.OnTilesListen
     }
 
     @Override
-    public void onTileEvent(DownloadTileEvent.DownloadTileType event) {
+    public void onTileEvent(DownloadTileEvent.DownloadTileType event, int currentZoom, int currentMaxProgress, int currentProgress) {
+
     }
 
     @Override

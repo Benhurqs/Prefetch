@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+
+import br.com.benhurqs.prefetch.listeners.DownloadTileEvent;
 import br.com.benhurqs.prefetch.maps.ArcGIS.ArcGISManager;
 import br.com.benhurqs.prefetch.R;
 

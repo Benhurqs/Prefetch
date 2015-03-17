@@ -273,7 +273,6 @@ public class ArcgisPrefechProgress extends DialogFragment implements OnClickList
 
 	        @Override
 	        public void onReceive(Context context, Intent intent) {
-
 	        	updatePrefechProgressTitle(context);
 
 	        }

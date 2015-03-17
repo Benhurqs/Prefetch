@@ -11,7 +11,10 @@ import com.loopj.android.http.SyncHttpClient;
 
 import org.apache.http.Header;
 
+import br.com.benhurqs.prefetch.R;
 import br.com.benhurqs.prefetch.listeners.DownloadTileEvent;
+import br.com.benhurqs.prefetch.preferences.MapsPreferences;
+import br.com.benhurqs.prefetch.util.TileFileHandler;
 import br.com.benhurqs.prefetch.util.Utils;
 
 /**
@@ -23,7 +26,10 @@ public class Core {
     private String url;
     private Context ctx;
     private RequestType type;
+    private String pathName;
     private DownloadTileEvent tilesEvent;
+    private int zoom;
+    private String x, y;
 
     protected RequestParams params;
     protected AsyncHttpResponseHandler responseHandler = null;
@@ -35,11 +41,16 @@ public class Core {
         GET, POST;
     }
 
-    public Core(Context ctx, RequestType type, String url){
-        this.url = url;
+    public Core(Context ctx, RequestType type, String pathName, int zoom , long y , long x){
         this.ctx = ctx;
         this.type = type;
+        this.pathName = pathName;
+        this.zoom = zoom;
+        this.x = String.valueOf(x);
+        this.y = String.valueOf(y);
 
+        MapsPreferences pref = new MapsPreferences(ctx);
+        this.url = ctx.getString( pref.getMapUrl(),  ctx.getString(R.string.host_name),zoom,y,x );
         tilesEvent = new DownloadTileEvent();
     }
 
@@ -57,7 +68,7 @@ public class Core {
             startComm();
             return true;
         }else{
-            tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.FAILURE);
+            tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.ERROR);
         }
 
         return false;
@@ -69,24 +80,31 @@ public class Core {
             @Override
             public void onStart() {
                 super.onStart();
-                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.START);
+//                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.START);
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                Bitmap image = BitmapFactory.decodeByteArray(responseBody, 0, responseBody.length);
-                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.UPDATE);
+                Bitmap tileBmp = BitmapFactory.decodeByteArray(responseBody, 0, responseBody.length);
+
+                if( tileBmp != null ) {
+                    if (TileFileHandler.storeTile(pathName, tileBmp,
+                            String.valueOf(zoom), String.valueOf(y), String.valueOf(x), ctx)) {
+                        return;
+                    }
+                }
+                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.ERROR);
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.FAILURE);
+                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.ERROR);
             }
 
             @Override
             public void onFinish() {
                 super.onFinish();
-                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.FINISH);
+//                tilesEvent.notifyTileEvent(DownloadTileEvent.DownloadTileType.FINISH);
             }
         };
 

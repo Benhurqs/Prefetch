@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class DownloadTileEvent {
 
     public enum DownloadTileType{
-        START, UPDATE, FAILURE, CANCEL, STOP, FINISH, CONTINUE;
+        START, UPDATE, FAILURE, CANCEL, ERROR, FINISH, CONTINUE;
     }
 
     public interface OnTilesListener{
